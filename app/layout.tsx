@@ -4,6 +4,9 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Dungeon Within Thailand Wiki',
   description: 'ศูนย์รวมข้อมูล คู่มือ และกลยุทธ์เกม Dungeon Within สำหรับผู้เล่นชาวไทย',
+  icons: {
+    icon: [{ url: '/favicon.ico', sizes: '16x16 32x32 48x48 256x256' }],
+  },
   openGraph: {
     title: 'Dungeon Within Thailand Wiki',
     description: 'ศูนย์รวมข้อมูล คู่มือ และกลยุทธ์เกม Dungeon Within สำหรับผู้เล่นชาวไทย',
