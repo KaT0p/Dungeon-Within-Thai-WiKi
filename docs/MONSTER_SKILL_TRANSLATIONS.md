@@ -19,7 +19,7 @@
 - Tier 3: 8 ตัว · 40 ชื่อ
 - รวม: **26 ตัว · 130 ชื่อ**
 - ขอบเขตของรอบนี้คือชื่อ `A`, `B`, `M`, `S1`, `S2` เท่านั้น ตัวเลข สูตร และคำอธิบายเอฟเฟกต์ยังคงเป็น `needs_review`
-- ชุดข้อมูลที่เว็บไซต์ใช้: [`app/monster-skills-data.ts`](./app/monster-skills-data.ts)
+- ชุดข้อมูลที่เว็บไซต์ใช้: [`app/monster-skills-data.ts`](../app/monster-skills-data.ts)
 - หน้าค้นหา: `/wiki/monster-skills`
 
 ## Tier 1

@@ -20,4 +20,4 @@ monsters/wendigo-thumbnail.webp
 monsters/wendigo.webp
 ```
 
-ก่อนเพิ่มรูป ให้บันทึกแหล่งที่มาและสิทธิ์การใช้งานใน `IMAGE_CREDITS.md` ที่โฟลเดอร์หลักของโปรเจกต์
+ก่อนเพิ่มรูป ให้บันทึกแหล่งที่มาและสิทธิ์การใช้งานใน `docs/IMAGE_CREDITS.md`

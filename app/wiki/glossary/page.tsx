@@ -16,7 +16,7 @@ export default function GlossaryPage() {
     <section className="hub-content"><div className="glossary-tools"><label><span>⌕</span><input value={query} onChange={(event)=>setQuery(event.target.value)} placeholder="ค้นหาคำอังกฤษหรือคำไทย..." /></label><div>{filters.map((item)=><button className={filter === item ? 'active' : ''} onClick={()=>setFilter(item)} key={item}>{item}</button>)}</div></div>
       <div className="glossary-count">แสดง <b>{terms.length}</b> จาก {glossaryTerms.length} คำที่นำเข้ารอบแรก</div>
       <div className="glossary-table"><div className="table-head"><span>English</span><span>คำที่ใช้ใน Wiki</span><span>สถานะ</span></div>{terms.map(([en,th,status])=><div key={en}><strong>{en}</strong><span>{th}</span><i className={status === 'ต้องตรวจในเกม' ? 'review' : status === 'คงอังกฤษ' ? 'english' : 'verified'}>{status}</i></div>)}</div>
-      <div className="source-note"><span>ฉบับเต็มใน GLOSSARY.md มีมากกว่า 100 รายการ</span><span>หน้านี้นำเข้าคำแกนหลักก่อน</span></div>
+      <div className="source-note"><span>ฉบับเต็มใน docs/GLOSSARY.md มีมากกว่า 100 รายการ</span><span>หน้านี้นำเข้าคำแกนหลักก่อน</span></div>
     </section><SiteFooter />
   </main>;
 }
