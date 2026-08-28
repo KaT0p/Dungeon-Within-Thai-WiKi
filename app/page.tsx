@@ -1,94 +1,62 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { articles, categories } from './wiki-data';
+import Link from 'next/link';
+import SiteHeader, { SiteFooter } from './components/site-header';
+import { darkLords, glossaryTerms, integrationStatus, monsters, prototypeMonsters, statusEffects } from './content-data';
+import { facilities } from './facilities-data';
+import { relics } from './items-data';
+import { monsterSkillTranslations } from './monster-skills-data';
+
+const searchIndex = [
+  { title: 'ระบบเกม', description: 'Run, Node, Combat และความก้าวหน้าข้าม Run', category: 'ระบบ', href: '/wiki/systems', keywords: 'system ark combat node run ระบบ เกม' },
+  { title: 'ค่าสถานะและ Key Stat', description: 'STR, DEX, CON, INT, WIS, CHA และสูตร Modifier', category: 'ระบบ', href: '/wiki/stats', keywords: 'stats key stat strength dexterity constitution intelligence wisdom charisma กายภาพ เวทมนตร์ physical magic modifier attack roll saving throw' },
+  { title: 'เอฟเฟกต์สถานะ', description: 'ชื่อไทยและผลของ Buff, Debuff และเอฟเฟกต์พื้นที่', category: 'ระบบ', href: '/wiki/status-effects', keywords: statusEffects.map((effect)=>`${effect.en} ${effect.th} ${effect.summary}`).join(' ') },
+  { title: 'จอมมารทั้งหมด', description: 'ข้อมูล Desponia, Aura และ Rhea', category: 'จอมมาร', href: '/wiki/dark-lords', keywords: 'dark lord จอมมาร' },
+  { title: 'มอนสเตอร์ทั้งหมด', description: 'รายชื่อ 76 ตัว แบ่ง Tier 1–9', category: 'มอนสเตอร์', href: '/wiki/monsters', keywords: monsters.map((monster)=>monster.slice(0,5).join(' ')).join(' ') },
+  { title: 'สกิลมอนสเตอร์ Tier 1–3', description: 'คำแปลไทย–อังกฤษ 130 ชื่อจากมอนสเตอร์ 26 ตัว', category: 'มอนสเตอร์', href: '/wiki/monster-skills', keywords: monsterSkillTranslations.map((monster)=>`${monster.name} ${monster.skills.map((skill)=>`${skill.en} ${skill.th}`).join(' ')}`).join(' ') },
+  { title: 'ห้องและกับดัก', description: '41 รายการ พร้อมผัง 3×3 และชุดแนะนำตามจอมมาร', category: 'สิ่งปลูกสร้าง', href: '/wiki/facilities', keywords: `จัดผัง layout ชุดกับดัก Desponia Aura Rhea ${facilities.map((entry)=>`${entry.name} ${entry.nameTh} ${entry.kind} ${entry.tags.join(' ')}`).join(' ')}` },
+  { title: 'ไอเทมและอุปกรณ์', description: 'Relic 87 ชิ้นและคู่มือช่อง Part', category: 'ไอเทม', href: '/wiki/items', keywords: `relic part equipment dream dust item อุปกรณ์ ${relics.map((entry)=>`${entry.name} ${entry.nameTh} ${entry.group} ${entry.tags.join(' ')}`).join(' ')}` },
+  ...prototypeMonsters.map((monster)=>({ title: monster.name, description: monster.summaryTh, category: 'มอนสเตอร์', href: `/wiki/monsters/${monster.slug}`, keywords: `${monster.name} ${monster.keyStat} ${monster.attackTypes.join(' ')} ${monster.skills.map((skill)=>`${skill.en} ${skill.th}`).join(' ')}` })),
+  ...darkLords.map((lord)=>({ title: lord.name, description: lord.theme, category: 'จอมมาร', href: `/wiki/dark-lords/${lord.slug}`, keywords: `${lord.name} ${lord.core} ${lord.keyStat}` })),
+  { title: 'พจนานุกรมศัพท์', description: 'มาตรฐานคำแปลไทย–อังกฤษ', category: 'ศัพท์', href: '/wiki/glossary', keywords: glossaryTerms.map((term)=>`${term[0]} ${term[1]}`).join(' ') },
+  { title: 'แหล่งข้อมูลและการตรวจสอบ', description: 'ที่มาของข้อมูลและระดับความน่าเชื่อถือ', category: 'โครงการ', href: '/wiki/sources', keywords: 'source license cc by sa แหล่งข้อมูล' },
+  { title: 'Roadmap', description: 'ความคืบหน้าและหัวข้อถัดไป', category: 'โครงการ', href: '/roadmap', keywords: 'roadmap phase progress แผนงาน' },
+];
+
+const categories = [
+  { icon: '✦', title: 'ค่าสถานะ', description: 'STR–CHA, Key Stat และการอ่านสกิล', tone: 'amber', href: '/wiki/stats' },
+  { icon: '♜', title: 'จอมมาร', description: '3 ตัว · Skill, Part และ Authority', tone: 'violet', href: '/wiki/dark-lords' },
+  { icon: '♞', title: 'มอนสเตอร์', description: '76 ตัว · Tier, Type และ Key Stat', tone: 'teal', href: '/wiki/monsters' },
+  { icon: '⌁', title: 'ห้องและกับดัก', description: '41 รายการ · ผัง 3×3 และชุดแนะนำ', tone: 'rose', href: '/wiki/facilities' },
+  { icon: '◆', title: 'ไอเทมและอุปกรณ์', description: '87 Relics · คู่มือช่อง Part', tone: 'amber', href: '/wiki/items' },
+  { icon: '⌘', title: 'ระบบเกม', description: '10 ระบบหลักและวงจรการเล่น', tone: 'rose', href: '/wiki/systems' },
+  { icon: 'A', title: 'ศัพท์ในเกม', description: '40 คำแกนหลักที่ค้นหาได้', tone: 'amber', href: '/wiki/glossary' },
+  { icon: '◎', title: 'แหล่งข้อมูล', description: 'ที่มา สิทธิ์ และการตรวจสอบ', tone: 'teal', href: '/wiki/sources' },
+];
+
+const updates = [
+  { category: 'Phase 2.5b', title: 'Demon Lord Relics', description: 'เพิ่ม War of the Gods 28 ชิ้น แยกชุด Tania, Lilith และ Meryelle พร้อมตัวกรอง', href: '/wiki/items#relic-catalog' },
+  { category: 'Phase 2.4b', title: 'แนวทางจัดผังและชุดกับดัก', description: 'ผัง 3×3 สามแบบ ชุดแนะนำตามจอมมาร และคู่ห้องที่นำไปทดลองใน Run ได้', href: '/wiki/facilities#layout-guide' },
+  { category: 'Phase 2.2d', title: 'แนวทางเล่น Dark Lords', description: 'โครงทีม ลำดับ Authority แผนต้น–กลาง–ท้าย Run และข้อผิดพลาดของจอมมารทั้ง 3 ตัว', href: '/wiki/dark-lords' },
+];
 
 export default function Home() {
   const [query, setQuery] = useState('');
   const results = useMemo(() => {
-    const term = query.trim().toLocaleLowerCase('th');
-    if (!term) return [];
-    return articles.filter((article) =>
-      `${article.title} ${article.description} ${article.category} ${article.keywords.join(' ')}`
-        .toLocaleLowerCase('th').includes(term),
-    ).slice(0, 5);
+    const term = query.trim().toLocaleLowerCase('th'); if (!term) return [];
+    return searchIndex.filter((item)=>`${item.title} ${item.description} ${item.keywords}`.toLocaleLowerCase('th').includes(term)).slice(0,6);
   }, [query]);
-
-  return (
-    <main>
-      <header className="site-header">
-        <a className="brand" href="#top" aria-label="Dungeon Within Thailand Wiki หน้าแรก">
-          <span className="brand-mark"><i>DW</i></span>
-          <span><strong>Dungeon Within</strong><small>THAILAND WIKI</small></span>
-        </a>
-        <nav aria-label="เมนูหลัก">
-          <a href="#guides">คู่มือเริ่มต้น</a><a href="#categories">คลังข้อมูล</a><a href="#updates">อัปเดตล่าสุด</a>
-        </nav>
-        <a className="header-search" href="#search">ค้นหา <span>⌕</span></a>
-        <button className="menu-button" aria-label="เปิดเมนู">☰</button>
-      </header>
-
-      <section className="hero" id="top">
-        <div className="hero-glow" aria-hidden="true" />
-        <div className="hero-copy">
-          <p className="eyebrow"><span /> คู่มือสำหรับผู้เล่นชาวไทย</p>
-          <h1>สร้างดันเจี้ยน<br />ที่ไม่มีใคร<span>หนีรอด</span></h1>
-          <p className="lead">ศูนย์รวมข้อมูล คู่มือ และกลยุทธ์เกม Dungeon Within ฉบับภาษาไทย ตั้งแต่ก้าวแรกของจอมมาร ไปจนถึงการจัดกองทัพขั้นสูง</p>
-          <div className="search-box" id="search">
-            <span aria-hidden="true">⌕</span>
-            <input aria-label="ค้นหาข้อมูลใน Wiki" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="ค้นหาจอมมาร มอนสเตอร์ ห้อง หรือไอเทม..." />
-            <kbd>/</kbd>
-            {query && <div className="search-results" role="listbox">
-              {results.length > 0 ? results.map((article) => (
-                <a href={`/wiki/${article.slug}`} key={article.slug}>
-                  <span>{article.title}<small>{article.description}</small></span><b>{article.category}</b>
-                </a>
-              )) : <p>ยังไม่พบข้อมูลที่ค้นหา</p>}
-            </div>}
-          </div>
-          <div className="hero-actions">
-            <a className="primary-button" href="/wiki/getting-started">เริ่มต้นเล่นเกม <span>→</span></a>
-            <a className="text-button" href="#categories">สำรวจคลังข้อมูล</a>
-          </div>
-          <dl className="quick-stats">
-            <div><dt>{articles.length}</dt><dd>บทความตั้งต้น</dd></div><div><dt>{categories.length}</dt><dd>หมวดข้อมูล</dd></div><div><dt>0.6.0</dt><dd>เวอร์ชันที่ติดตาม</dd></div>
-          </dl>
-        </div>
-
-        <aside className="featured-card" aria-label="บทความแนะนำ">
-          <div className="card-art" aria-hidden="true"><div className="moon" /><div className="tower tower-one" /><div className="tower tower-two" /><span className="rune">◇</span></div>
-          <div className="featured-content">
-            <span className="tag">แนะนำสำหรับมือใหม่</span><h2>เริ่มต้นสร้างดันเจี้ยนแรก</h2>
-            <p>รู้จักโครงสร้างการเล่น เลือกแนวทาง และเตรียมดันเจี้ยนให้พร้อมรับมือผู้บุกรุก</p>
-            <a href="/wiki/getting-started">อ่านคู่มือ 8 นาที <span>↗</span></a>
-          </div>
-        </aside>
-      </section>
-
-      <section className="category-section" id="categories">
-        <div className="section-heading"><div><p className="eyebrow"><span /> ค้นหาข้อมูล</p><h2>สำรวจคลัง Wiki</h2></div><p>โครงสร้างความรู้สำหรับการสร้างดันเจี้ยน<br />และกองทัพมอนสเตอร์ของคุณ</p></div>
-        <div className="category-grid">
-          {categories.map((category) => <a className={`category-card ${category.tone}`} href={`/wiki/${category.featuredSlug}`} key={category.title}>
-            <span className="category-icon">{category.icon}</span><span><strong>{category.title}</strong><small>{category.description}</small></span><b>→</b>
-          </a>)}
-        </div>
-      </section>
-
-      <section className="latest-section" id="updates">
-        <div className="section-heading dark-heading"><div><p className="eyebrow"><span /> บทความล่าสุด</p><h2>ข้อมูลที่เพิ่งเพิ่ม</h2></div><span className="version-chip">ติดตามเกมเวอร์ชัน 0.6.0</span></div>
-        <div className="article-list">
-          {articles.slice(0, 3).map((article, index) => <a href={`/wiki/${article.slug}`} key={article.slug}>
-            <span className="article-number">0{index + 1}</span><span><b>{article.category}</b><strong>{article.title}</strong><small>{article.description}</small></span><i>↗</i>
-          </a>)}
-        </div>
-      </section>
-
-      <section className="guide-strip" id="guides">
-        <div><p className="eyebrow"><span /> เส้นทางจอมมาร</p><h2>ยังไม่รู้จะเริ่มตรงไหน?</h2></div>
-        <p>อ่านคู่มือพื้นฐานแบบเป็นขั้นตอน ใช้เวลาไม่นาน<br />แล้วกลับไปสร้างดันเจี้ยนของคุณต่อได้เลย</p>
-        <a className="primary-button" href="/wiki/getting-started">ดูคู่มือเริ่มต้น <span>→</span></a>
-      </section>
-      <footer><span>Dungeon Within Thailand Wiki</span><span>โปรเจกต์แฟนเมดโดยชุมชน — ไม่เกี่ยวข้องกับ GameCoaster</span></footer>
-    </main>
-  );
+  return <main><SiteHeader />
+    <section className="hero" id="top"><div className="hero-glow" aria-hidden="true" /><div className="hero-copy">
+      <p className="eyebrow"><span /> ข้อมูลที่ตรวจสอบย้อนกลับได้</p><h1>สร้างดันเจี้ยน<br />ด้วยข้อมูล<span>ที่ชัดเจน</span></h1>
+      <p className="lead">คลังข้อมูล Dungeon Within ภาษาไทยที่แยกข้อเท็จจริงออกจากคำแนะนำ ทุกหน้าระบุเวอร์ชัน แหล่งอ้างอิง และข้อมูลที่ยังต้องตรวจในเกม</p>
+      <div className="search-box" id="search"><span aria-hidden="true">⌕</span><input aria-label="ค้นหาข้อมูลใน Wiki" value={query} onChange={(event)=>setQuery(event.target.value)} placeholder="ค้นหา Desponia, Bloom, Ark of Memory..." /><kbd>/</kbd>{query && <div className="search-results" role="listbox">{results.length ? results.map((item)=><a href={item.href} key={item.href}><span>{item.title}<small>{item.description}</small></span><b>{item.category}</b></a>) : <p>ยังไม่พบข้อมูลที่ค้นหา</p>}</div>}</div>
+      <div className="hero-actions"><a className="primary-button" href="/wiki">เปิดคลังข้อมูล <span>→</span></a><a className="text-button" href="/roadmap">ดูความคืบหน้า</a></div>
+      <dl className="quick-stats"><div><dt>{monsters.length}</dt><dd>มอนสเตอร์ในบัญชี</dd></div><div><dt>{glossaryTerms.length}</dt><dd>คำศัพท์บนเว็บ</dd></div><div><dt>{integrationStatus.gameVersion}</dt><dd>เวอร์ชันเป้าหมาย</dd></div></dl>
+    </div><aside className="featured-card" aria-label="Dungeon Within Thailand Wiki"><div className="hero-og-image"><img src="/og.png" alt="Dungeon Within Thailand Wiki คู่มือสำหรับผู้เล่นชาวไทย" /></div><div className="featured-content"><span className="tag">คลังข้อมูลภาษาไทย</span><h2>รู้จักจอมมารทั้ง 3 ตัว</h2><p>เปรียบเทียบแกนกลไก ค่าสถานะ สกิล ชิ้นส่วน และแนวทางจัดทีม</p><a href="/wiki/dark-lords">เปิดบัญชีจอมมาร <span>↗</span></a></div></aside></section>
+    <section className="category-section" id="categories"><div className="section-heading"><div><p className="eyebrow"><span /> คลังข้อมูล</p><h2>เนื้อหาที่พร้อมอ่าน</h2></div><p>ไม่มีบทความทั่วไปที่ไม่มีที่มา<br />ข้อมูลไม่แน่ใจจะมีป้ายเตือนชัดเจน</p></div><div className="category-grid">{categories.map((category)=><a className={`category-card ${category.tone}`} href={category.href} key={category.title}><span className="category-icon">{category.icon}</span><span><strong>{category.title}</strong><small>{category.description}</small></span><b>→</b></a>)}</div></section>
+    <section className="latest-section" id="updates"><div className="section-heading dark-heading"><div><p className="eyebrow"><span /> Content Integration</p><h2>ข้อมูลที่นำเข้ารอบแรก</h2></div><span className="version-chip">อัปเดต {integrationStatus.updatedAt}</span></div><div className="article-list">{updates.map((item,index)=><a href={item.href} key={item.title}><span className="article-number">0{index+1}</span><span><b>{item.category}</b><strong>{item.title}</strong><small>{item.description}</small></span><i>↗</i></a>)}</div></section>
+    <section className="guide-strip" id="guides"><div><p className="eyebrow"><span /> เพิ่มล่าสุด</p><h2>สกิลมอนสเตอร์ Tier 1–3</h2></div><p>แปลชื่อการโจมตี คุณลักษณะติดตัว และชิ้นส่วน<br />ครบ 130 ชื่อจากมอนสเตอร์ช่วงต้นเกม 26 ตัว</p><Link className="primary-button" href="/wiki/monster-skills">เปิดคลังสกิล <span>→</span></Link></section><SiteFooter />
+  </main>;
 }
