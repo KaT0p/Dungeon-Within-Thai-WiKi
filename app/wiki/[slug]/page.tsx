@@ -18,7 +18,7 @@ export default async function WikiArticle({ params }: { params: Promise<{ slug: 
   const related = articles.filter((item) => item.slug !== slug).slice(0, 3);
   return <main className="article-page">
     <header className="site-header">
-      <a className="brand" href="/"><span className="brand-mark"><i>DW</i></span><span><strong>Dungeon Within</strong><small>THAILAND WIKI</small></span></a>
+      <a className="brand" href="/"><span className="brand-mark" aria-hidden="true" /><span><strong>Dungeon Within</strong><small>THAILAND WIKI</small></span></a>
       <nav aria-label="เมนูหลัก"><a href="/#guides">คู่มือเริ่มต้น</a><a href="/#categories">คลังข้อมูล</a><a href="/#updates">อัปเดตล่าสุด</a></nav><a className="header-search" href="/#search">ค้นหา <span>⌕</span></a>
     </header>
     <div className="article-shell">
