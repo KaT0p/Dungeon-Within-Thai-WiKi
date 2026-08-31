@@ -10,6 +10,7 @@ import { monsterSkillTranslations } from './monster-skills-data';
 
 const searchIndex = [
   { title: 'ระบบเกม', description: 'Run, Node, Combat และความก้าวหน้าข้าม Run', category: 'ระบบ', href: '/wiki/systems', keywords: 'system ark combat node run ระบบ เกม' },
+  { title: "Architect's Workshop", description: 'ลำดับปลดล็อก เครื่องมือถาวร ค่าใช้จ่าย และสายพึ่งพา', category: 'ระบบ', href: '/wiki/architects-workshop', keywords: 'architect workshop essence chamber ark memory trading post codex dismantle sacrifice transfer abyssal ink fragment hourglass เวิร์กช็อป ปลดล็อก ถาวร' },
   { title: 'ค่าสถานะและ Key Stat', description: 'STR, DEX, CON, INT, WIS, CHA และสูตร Modifier', category: 'ระบบ', href: '/wiki/stats', keywords: 'stats key stat strength dexterity constitution intelligence wisdom charisma กายภาพ เวทมนตร์ physical magic modifier attack roll saving throw' },
   { title: 'เอฟเฟกต์สถานะ', description: 'ชื่อไทยและผลของ Buff, Debuff และเอฟเฟกต์พื้นที่', category: 'ระบบ', href: '/wiki/status-effects', keywords: statusEffects.map((effect)=>`${effect.en} ${effect.th} ${effect.summary}`).join(' ') },
   { title: 'จอมมารทั้งหมด', description: 'ข้อมูล Desponia, Aura และ Rhea', category: 'จอมมาร', href: '/wiki/dark-lords', keywords: 'dark lord จอมมาร' },
