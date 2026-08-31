@@ -1,8 +1,8 @@
 export const integrationStatus = {
   gameVersion: '0.6.0',
-  updatedAt: '28 ส.ค. 2026',
-  completedTopics: 17,
-  nextTopic: 'แปลสกิลมอนสเตอร์ Tier 6–7',
+  updatedAt: '31 ส.ค. 2026',
+  completedTopics: 19,
+  nextTopic: 'ทำบัญชีศัตรูและผู้บุกรุก',
 };
 
 export const statusEffects = [
@@ -317,10 +317,11 @@ export const roadmapPhases = [
   { id: '2.3b', title: 'มอนสเตอร์ต้นแบบ', status: 'done', output: 'แปลสกิลและลงรายละเอียด Wendigo, Arachne, Transcendent' },
   { id: '2.3c', title: 'คำแปลมอนสเตอร์ Tier 1–3', status: 'done', output: 'แปล 130 ชื่อจากมอนสเตอร์ 26 ตัว พร้อมหน้าค้นหาและกรอง' },
   { id: '2.3d', title: 'คำแปลมอนสเตอร์ Tier 4–5', status: 'done', output: 'แปล 30 ชื่อจาก 6 ตัว และทำหน้ารอข้อมูลต้นทางอีก 13 ตัว' },
-  { id: '2.3e', title: 'คำแปลมอนสเตอร์ Tier 6–7', status: 'next', output: 'ขั้นถัดไป: ขยายคลังคำแปลไปยังมอนสเตอร์ช่วงกลาง–ท้ายเกม' },
+  { id: '2.3e', title: 'คำแปลมอนสเตอร์ Tier 6–7', status: 'done', output: 'แปล 70 ชื่อจาก 14 ตัว และทำหน้ารอข้อมูลต้นทางอีก 5 ตัว' },
+  { id: '2.3f', title: 'คำแปลมอนสเตอร์ Tier 8–9', status: 'done', output: 'แปล 60 ชื่อจากมอนสเตอร์ระดับสูงสุดครบ 12 ตัว' },
   { id: '2.4', title: 'ห้องและกับดัก', status: 'done', output: 'รวบรวม 41 รายการ แบ่งสนามล่า กับดัก และโครงสร้าง พร้อมสูตรและคำเตือน' },
   { id: '2.4b', title: 'แนวทางจัดผังและชุดกับดัก', status: 'done', output: 'เพิ่มผัง 3×3 หลักวางห้อง ชุดตามจอมมาร และคู่ห้องแนะนำ' },
   { id: '2.5', title: 'ไอเทมและอุปกรณ์', status: 'done', output: 'รวบรวม Relic 59 ชิ้น และอธิบายช่อง Part, วิธีหา, Dominance และ Ark' },
   { id: '2.5b', title: 'Demon Lord Relics', status: 'done', output: 'นำเข้า War of the Gods 28 ชิ้น แยก Tania, Lilith และ Meryelle' },
-  { id: '2.6', title: 'ศัตรูและผู้บุกรุก', status: 'pending', output: 'ทำบัญชีประเภท ความสามารถ และจุดอ่อนของผู้บุกรุก' },
+  { id: '2.6', title: 'ศัตรูและผู้บุกรุก', status: 'next', output: 'ขั้นถัดไป: ทำบัญชีประเภท ความสามารถ และจุดอ่อนของผู้บุกรุก' },
 ] as const;

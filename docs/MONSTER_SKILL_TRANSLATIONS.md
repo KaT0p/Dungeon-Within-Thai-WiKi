@@ -1,8 +1,8 @@
-# คำแปลสกิลมอนสเตอร์ — Tier 1–5 และชุดต้นแบบ
+# คำแปลสกิลมอนสเตอร์ — Tier 1–9 และชุดต้นแบบ
 
 > เกมเป้าหมาย: v0.6.0  
 > ตรวจต้นทาง: 31 ส.ค. 2026
-> สถานะ: **Phase 2.3d เสร็จแล้ว** — แปลชื่อ 160 รายการจากมอนสเตอร์ Tier 1–5 ที่มีหน้ารายละเอียด
+> สถานะ: **Phase 2.3f เสร็จแล้ว** — แปลชื่อ 290 รายการจากมอนสเตอร์ Tier 1–9 ที่มีหน้ารายละเอียด
 
 ## หลักการอ่าน
 
@@ -12,14 +12,18 @@
 - `S1`, `S2` = ชิ้นส่วนเสริม (Sub Part)
 - ชื่อไทยเป็นคำแปลแฟนเมด ส่วนชื่ออังกฤษคงไว้เพื่อค้นในเกมและ Wiki ต้นทาง
 
-## สรุป Phase 2.3c–2.3d
+## สรุป Phase 2.3c–2.3f
 
 - Tier 1: 9 ตัว · 45 ชื่อ
 - Tier 2: 9 ตัว · 45 ชื่อ
 - Tier 3: 8 ตัว · 40 ชื่อ
 - Tier 4: มี 10 ตัว · แปลได้ 2 ตัว 10 ชื่อ · รอข้อมูล 8 ตัว
 - Tier 5: มี 9 ตัว · แปลได้ 4 ตัว 20 ชื่อ · รอข้อมูล 5 ตัว
-- รวม: **45 ตัว · แปลได้ 32 ตัว 160 ชื่อ · รอข้อมูล 13 ตัว**
+- Tier 6: มี 9 ตัว · แปลได้ 4 ตัว 20 ชื่อ · รอข้อมูล 5 ตัว
+- Tier 7: 10 ตัว · 50 ชื่อ
+- Tier 8: 6 ตัว · 30 ชื่อ
+- Tier 9: 6 ตัว · 30 ชื่อ
+- รวม: **76 ตัว · แปลได้ 58 ตัว 290 ชื่อ · รอข้อมูล 18 ตัว**
 - ขอบเขตของรอบนี้คือชื่อ `A`, `B`, `M`, `S1`, `S2` เท่านั้น ตัวเลข สูตร และคำอธิบายเอฟเฟกต์ยังคงเป็น `needs_review`
 - ชุดข้อมูลที่เว็บไซต์ใช้: [`app/monster-skills-data.ts`](../app/monster-skills-data.ts)
 - หน้าค้นหา: `/wiki/monster-skills`
@@ -84,6 +88,54 @@
 | Water Elemental | Flash — แสงวาบ | Song of Inspiration — บทเพลงแห่งแรงบันดาลใจ | Dissonance — เสียงไม่ประสาน | Melody of Encouragement — ทำนองแห่งกำลังใจ | Song of Protection — บทเพลงแห่งการปกป้อง |
 
 รอข้อมูลต้นทาง: Air Elemental, Fire Elemental, Skeleton Lord, Vampire และ Lich
+
+## Tier 6
+
+| Monster | A | B | M | S1 | S2 |
+|---|---|---|---|---|---|
+| Pegasus | Quick Thrust — แทงฉับไว | Sacred Radiance — รัศมีศักดิ์สิทธิ์ | Meteor Kick — ลูกเตะอุกกาบาต | Mystic Wings — ปีกเร้นลับ | Clairvoyance — ญาณทิพย์ |
+| Ugallu | Heavy Strike — โจมตีหนัก | Storm Herald — ผู้ประกาศแห่งพายุ | Thundercrush — บดขยี้อัสนี | Wind Blade — คมดาบวายุ | Eye of the Storm — ดวงตาพายุ |
+| Mind Elemental | Mind Blast — ระเบิดพลังจิต | Dream Lantern — โคมแห่งความฝัน | Nightmare Fog — หมอกฝันร้าย | Dreamscape Veil — ม่านแดนฝัน | Phantom Shift — ย้ายร่างภูต |
+| Arachne | Basic Thrust — แทงพื้นฐาน | Web Spinning — ชักใย | Titan Stomp — กระทืบยักษ์ | Steel Carapace — กระดองเหล็ก | Web Dome — โดมใยแมงมุม |
+
+รอข้อมูลต้นทาง: Gorgon, Phoenix, Vampire Lord, Night Crawler และ Death Knight
+
+## Tier 7
+
+| Monster | A | B | M | S1 | S2 |
+|---|---|---|---|---|---|
+| Sandworm | Poison Spray — พ่นพิษ | Veil of Sand — ม่านทราย | Crown of the Desert — มงกุฎแห่งทะเลทราย | Queen's Scale — เกล็ดราชินี | Sand's Protection — การคุ้มครองแห่งทราย |
+| Hydra | Basic Slash — ฟันพื้นฐาน | Multi-headed Regeneration — ฟื้นฟูหลายเศียร | Venomous Fang Greatsword — ดาบใหญ่เขี้ยวพิษ | Hydra's Scale — เกล็ดไฮดรา | Regenerating Head — เศียรฟื้นฟู |
+| Tethys | Ice Arrow — ศรน้ำแข็ง | Ruler of the Ocean — ผู้ครองมหาสมุทร | Spiral Conch Spear — หอกสังข์เกลียว | Crown of Pearl — มงกุฎไข่มุก | Tidal Cloak — เสื้อคลุมคลื่นสมุทร |
+| Fire Lord | Flame Strike — โจมตีเพลิง | Avatar of Magma — อวตารแมกมา | Giant Magma Hammer — ค้อนแมกมายักษ์ | Burning Lord's Core — แก่นเจ้าแห่งเพลิง | Volcanic Rock Armor — เกราะหินภูเขาไฟ |
+| Air Lord | Enhanced Shot (T4) — ยิงเสริมพลัง (T4) | Eye of the Storm — ดวงตาพายุ | Bow of Thunder and Lightning — ธนูแห่งฟ้าร้องและสายฟ้า | Wings of Wind — ปีกแห่งสายลม | Arrow of Thunderclouds — ศรเมฆอัสนี |
+| Water Lord | Ice Arrow — ศรน้ำแข็ง | Sea God's Majesty — บารมีเทพสมุทร | Spear of the Deep — หอกแห่งห้วงลึก | Core of the Vortex — แก่นวังวน | Tidal Scale — เกล็ดคลื่นสมุทร |
+| Titania | Ray — ลำแสง | Fairy Queen's Protection — การคุ้มครองแห่งราชินีภูต | World Tree's Staff — คทาแห่งต้นไม้โลก | Queen's Corolla — มงกุฎบุปผาราชินี | Spirit's Wings — ปีกวิญญาณ |
+| Body Reaper | Heavy Strike — โจมตีหนัก | Core of Flesh — แก่นเนื้อหนัง | Behemoth's Bone Fist — หมัดกระดูกเบฮีมอธ | Perfect Skeleton — โครงกระดูกสมบูรณ์แบบ | Chains of Restraint — โซ่พันธนาการ |
+| Soul Reaper | Shadow Bolt — ศรเงา | Veil of Souls — ม่านวิญญาณ | Reaper's Orb — ลูกแก้วแห่งยมทูต | Wraith's Robe — เสื้อคลุมเรธ | Spirit Lantern — โคมวิญญาณ |
+| Abomination | Basic Slash — ฟันพื้นฐาน | Undying Flesh — เนื้อหนังอมตะ | Greatsword of Slaughter — ดาบใหญ่แห่งการสังหาร | Stitched Flesh — เนื้อหนังเย็บปะ | Monster's Spine — กระดูกสันหลังมอนสเตอร์ |
+
+## Tier 8
+
+| Monster | A | B | M | S1 | S2 |
+|---|---|---|---|---|---|
+| Fenrir | Basic Slash — ฟันพื้นฐาน | Howl of the Apocalypse — เสียงหอนแห่งวันสิ้นโลก | Frostfang Greatsword — ดาบใหญ่เขี้ยวเยือกแข็ง | Shatter — แตกสลาย | Predatory Instinct — สัญชาตญาณนักล่า |
+| Sleipnir | Lethal Shot (T5) — ยิงสังหาร (T5) | Hooves of the Gale — กีบเท้าวายุ | Meteor Lance — ทวนอุกกาบาต | Comet Arrow — ศรดาวหาง | Evasive Maneuver/Counter Maneuver — ยุทธวิธีหลบหลีก/ยุทธวิธีโต้กลับ |
+| Kirin | Lightning Arrow — ศรสายฟ้า | Overload — ประจุเกินขีด | Wrathful Lightning — อัสนีพิโรธ | Lightning Leap — กระโจนสายฟ้า | Thundercloud Veil — ม่านเมฆอัสนี |
+| Ethereal | Ray — ลำแสง | Tears of the Sun — หยาดน้ำตาแห่งสุริยัน | Ray of Judgement — ลำแสงพิพากษา | Mirror of Retribution — กระจกแห่งการตอบโต้ | Ethereal Shield — โล่ไร้กาย |
+| Lich Queen | Shadow Bolt — ศรเงา | Power Word Death — วาจาอำนาจ: มรณะ | Finger of Death — นิ้วมรณะ | Necrotic Wave — คลื่นเนโครติก | Echo of Death — เสียงสะท้อนแห่งความตาย |
+| Nightwalker | Quick Slash — ฟันฉับไว | Abyssal Veil — ม่านแห่งห้วงเหว | Sever Form — แยกร่าง | Devour Shadow — กลืนกินเงา | Dread Strike — โจมตีสะพรึง |
+
+## Tier 9
+
+| Monster | A | B | M | S1 | S2 |
+|---|---|---|---|---|---|
+| Behemoth | Heavy Strike — โจมตีหนัก | Behemoth's Carapace — กระดองเบฮีมอธ | Fist of the Great Mountain — หมัดแห่งมหาบรรพต | Indestructible Body — ร่างกายมิอาจทำลาย | Behemoth's Vitality — พลังชีวิตเบฮีมอธ |
+| Nemea | Magic Arrow — ศรเวทมนตร์ | Heart of the Lion King — หัวใจแห่งราชสีห์ราชัน | Scepter of Truth — คทาแห่งสัจจะ | Insight into All Things — หยั่งรู้สรรพสิ่ง | Mantle of Transcendence — เสื้อคลุมแห่งการก้าวข้าม |
+| Emmelia | Lightning Arrow — ศรสายฟ้า | Power of the Spirit Realm — พลังแห่งแดนวิญญาณ | Harmony of All Things — ความกลมกลืนแห่งสรรพสิ่ง | Spirit Dominion — อำนาจเหนือวิญญาณ | Elemental Wreath — มงกุฎธาตุ |
+| Transcendent | Mind Pressure — แรงกดดันทางจิต | Mind of the World — จิตแห่งโลก | Staff of Transcendence — คทาแห่งการก้าวข้าม | Insight into All Minds — หยั่งรู้ทุกจิต | Branch of the World Tree — กิ่งแห่งต้นไม้โลก |
+| Grim Reaper | Quick Slash — ฟันฉับไว | Urn of the Dead — โกศแห่งผู้ตาย | Scythe of the Soul Harvest — เคียวเก็บเกี่ยววิญญาณ | Reaper's Robe — เสื้อคลุมยมทูต | Death's Echo — เสียงสะท้อนแห่งความตาย |
+| Physis | Blood Extraction — สกัดโลหิต | Dominion of Blood — อำนาจแห่งโลหิต | Crimson Throne — บัลลังก์ชาด | Veil of Blood — ม่านโลหิต | Source of Life — ต้นกำเนิดชีวิต |
 
 ## หมายเหตุต้นทาง
 
