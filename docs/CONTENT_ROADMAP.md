@@ -168,6 +168,16 @@
 
 รายละเอียดผลลัพธ์: [MONSTER_SKILL_TRANSLATIONS.md](./MONSTER_SKILL_TRANSLATIONS.md)
 
+### 2.3d คำแปลสกิลมอนสเตอร์ Tier 4–5
+
+- [x] ตรวจสถานะหน้าต้นทางครบ 19 ตัว
+- [x] แปล A/B/M/S1/S2 ของ Nightmare, Nosferatu, Sphinx, Basilisk, Cockatrice และ Water Elemental รวม 30 ชื่อ
+- [x] ทำหน้าภายในเว็บให้มอนสเตอร์ Tier 4–5 ทุกตัว
+- [x] ติดป้ายรอข้อมูลต้นทางให้ 13 ตัวที่ยังไม่มีหน้ารายละเอียด
+- [x] ขยายหน้าค้นหาและตัวกรองเป็น Tier 1–5
+
+รายละเอียดผลลัพธ์: [MONSTER_SKILL_TRANSLATIONS.md](./MONSTER_SKILL_TRANSLATIONS.md)
+
 ### 2.4 ห้อง สิ่งปลูกสร้าง และกับดัก
 
 - [ ] รายชื่อทั้งหมด

@@ -372,6 +372,7 @@ footer { display: flex; justify-content: space-between; padding: 24px clamp(24px
 .skill-catalog-list header small { color: #9a7390; font-size: 11px; text-transform: uppercase; }
 .skill-catalog-list header h2 { margin: 4px 0 0; font: 25px Georgia,serif; }
 .skill-catalog-list header a { color: #76537d; font-size: 12px; }
+.skill-catalog-list .source-pending { color: #9a7440; font-size: 11px; }
 .skill-translation-table > div { padding: 13px 22px; display: grid; grid-template-columns: 50px 1fr 1fr 150px; gap: 16px; align-items: center; border-bottom: 1px solid #e2dcd5; }
 .skill-translation-table .table-head { color: #969096; background: #f1ece6; font-size: 10px; text-transform: uppercase; }
 .skill-translation-table b { width: 34px; height: 34px; display: grid; place-items: center; color: #fff; background: #694c72; border-radius: 50%; font-size: 11px; }
@@ -379,6 +380,9 @@ footer { display: flex; justify-content: space-between; padding: 24px clamp(24px
 .skill-translation-table span { color: #654f68; font-size: 14px; }
 .skill-translation-table small { color: #8d868d; font-size: 12px; }
 .skill-catalog-list > article > footer { padding: 10px 22px; color: #aaa2a8; background: #f4efe9; font-size: 10px; text-align: right; }
+.pending-skill-data { margin: 18px 22px; padding: 22px; border: 1px dashed #cdbd9f; background: #f4ede1; }
+.pending-skill-data b { color: #7f5f30; font-size: 14px; }
+.pending-skill-data p { margin: 7px 0 0; color: #7c746c; font-size: 13px; line-height: 1.7; }
 .monster-table { border-top: 1px solid #ccc5bd; }
 .monster-table > div { min-height: 51px; padding: 12px; display: grid; grid-template-columns: minmax(180px,1.5fr) 55px 100px 75px 130px 115px; gap: 10px; align-items: center; border-bottom: 1px solid #d8d1c9; }
 .monster-table .table-head { min-height: auto; color: #958e95; font-size: 11px; text-transform: uppercase; }

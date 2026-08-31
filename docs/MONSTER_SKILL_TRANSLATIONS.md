@@ -1,8 +1,8 @@
-# คำแปลสกิลมอนสเตอร์ — Tier 1–3 และชุดต้นแบบ
+# คำแปลสกิลมอนสเตอร์ — Tier 1–5 และชุดต้นแบบ
 
 > เกมเป้าหมาย: v0.6.0  
-> ตรวจต้นทาง: 28 ส.ค. 2026  
-> สถานะ: **Phase 2.3c เสร็จแล้ว** — แปลชื่อ 130 รายการจากมอนสเตอร์ Tier 1–3 ครบ 26 ตัว
+> ตรวจต้นทาง: 31 ส.ค. 2026
+> สถานะ: **Phase 2.3d เสร็จแล้ว** — แปลชื่อ 160 รายการจากมอนสเตอร์ Tier 1–5 ที่มีหน้ารายละเอียด
 
 ## หลักการอ่าน
 
@@ -12,12 +12,14 @@
 - `S1`, `S2` = ชิ้นส่วนเสริม (Sub Part)
 - ชื่อไทยเป็นคำแปลแฟนเมด ส่วนชื่ออังกฤษคงไว้เพื่อค้นในเกมและ Wiki ต้นทาง
 
-## สรุป Phase 2.3c
+## สรุป Phase 2.3c–2.3d
 
 - Tier 1: 9 ตัว · 45 ชื่อ
 - Tier 2: 9 ตัว · 45 ชื่อ
 - Tier 3: 8 ตัว · 40 ชื่อ
-- รวม: **26 ตัว · 130 ชื่อ**
+- Tier 4: มี 10 ตัว · แปลได้ 2 ตัว 10 ชื่อ · รอข้อมูล 8 ตัว
+- Tier 5: มี 9 ตัว · แปลได้ 4 ตัว 20 ชื่อ · รอข้อมูล 5 ตัว
+- รวม: **45 ตัว · แปลได้ 32 ตัว 160 ชื่อ · รอข้อมูล 13 ตัว**
 - ขอบเขตของรอบนี้คือชื่อ `A`, `B`, `M`, `S1`, `S2` เท่านั้น ตัวเลข สูตร และคำอธิบายเอฟเฟกต์ยังคงเป็น `needs_review`
 - ชุดข้อมูลที่เว็บไซต์ใช้: [`app/monster-skills-data.ts`](../app/monster-skills-data.ts)
 - หน้าค้นหา: `/wiki/monster-skills`
@@ -62,6 +64,26 @@
 | Ghast | Quick Slash — ฟันฉับไว | Septic Claws — กรงเล็บติดเชื้อ | Frenzied Assault — จู่โจมคลุ้มคลั่ง | Savage Predator — นักล่าดุร้าย | Gluttonous Entrails — เครื่องในตะกละ |
 | Marionette | Quick Slash — ฟันฉับไว | Frenzied Movement — การเคลื่อนไหวคลุ้มคลั่ง | Frenzied Strike — โจมตีคลุ้มคลั่ง | Acrobat's Thread — ด้ายนักกายกรรม | Mocking Thread — ด้ายเย้ยหยัน |
 | Banshee | Mind Pressure — แรงกดดันทางจิต | Screaming Soul — วิญญาณกรีดร้อง | Cry of Despair — เสียงร่ำไห้แห่งความสิ้นหวัง | Etherealize — แปรสภาพไร้กาย | Death Omen — ลางมรณะ |
+
+## Tier 4
+
+| Monster | A | B | M | S1 | S2 |
+|---|---|---|---|---|---|
+| Nightmare | Mind Blast — ระเบิดพลังจิต | Fear Devourer — ผู้กลืนกินความกลัว | Nightmare Arrow — ศรฝันร้าย | Fear Aura — รัศมีความหวาดกลัว | Harvest of Fear — เก็บเกี่ยวความกลัว |
+| Nosferatu | Quick Thrust — แทงฉับไว | Blood Claw — กรงเล็บโลหิต | Blood Rain — พิรุณโลหิต | Shadow Cloak — เสื้อคลุมเงา | Mist Step — ย่างก้าวหมอก |
+
+รอข้อมูลต้นทาง: Minotaur, Griffon, Manticore, Unicorn, Grief Elemental, Sprout Knight, Death Priest และ Death Ranger
+
+## Tier 5
+
+| Monster | A | B | M | S1 | S2 |
+|---|---|---|---|---|---|
+| Sphinx | Heavy Strike — โจมตีหนัก | Sphinx's Riddle — ปริศนาแห่งสฟิงซ์ | Hammer of Judgment — ค้อนพิพากษา | Scroll of Truth — คัมภีร์แห่งสัจจะ | Final Verdict — คำตัดสินสุดท้าย |
+| Basilisk | Poison Spray — พ่นพิษ | Basilisk's Venom — พิษแห่งบาซิลิสก์ | Breath of Decay — ลมหายใจแห่งความเสื่อมสลาย | Hex of Weakness — คำสาปอ่อนกำลัง | Toxin Release — ปลดปล่อยพิษ |
+| Cockatrice | Flash — แสงวาบ | Petrifying Gaze — เนตรกลายเป็นหิน | Death Ray — รังสีมรณะ | Shatter — แตกสลาย | Petrified Skin — ผิวศิลา |
+| Water Elemental | Flash — แสงวาบ | Song of Inspiration — บทเพลงแห่งแรงบันดาลใจ | Dissonance — เสียงไม่ประสาน | Melody of Encouragement — ทำนองแห่งกำลังใจ | Song of Protection — บทเพลงแห่งการปกป้อง |
+
+รอข้อมูลต้นทาง: Air Elemental, Fire Elemental, Skeleton Lord, Vampire และ Lich
 
 ## หมายเหตุต้นทาง
 

@@ -2,9 +2,10 @@ export type MonsterSkillSlot = 'A' | 'B' | 'M' | 'S1' | 'S2';
 
 export type MonsterSkillTranslation = {
   name: string;
-  tier: 1 | 2 | 3;
-  type: 'Beast' | 'Elemental' | 'Undead';
+  tier: 1 | 2 | 3 | 4 | 5;
+  type: 'Beast' | 'Elemental' | 'Undead' | 'รอตรวจ';
   sourceUpdated: string;
+  sourceAvailable: boolean;
   skills: readonly {
     slot: MonsterSkillSlot;
     kind: string;
@@ -23,12 +24,16 @@ const kinds: Record<MonsterSkillSlot, string> = {
 
 function monster(
   name: string,
-  tier: 1 | 2 | 3,
+  tier: 1 | 2 | 3 | 4 | 5,
   type: MonsterSkillTranslation['type'],
   sourceUpdated: string,
   skills: readonly [MonsterSkillSlot, string, string][],
 ): MonsterSkillTranslation {
-  return { name, tier, type, sourceUpdated, skills: skills.map(([slot, en, th]) => ({ slot, kind: kinds[slot], en, th })) };
+  return { name, tier, type, sourceUpdated, sourceAvailable: true, skills: skills.map(([slot, en, th]) => ({ slot, kind: kinds[slot], en, th })) };
+}
+
+function pendingMonster(name: string, tier: 4 | 5): MonsterSkillTranslation {
+  return { name, tier, type: 'รอตรวจ', sourceUpdated: 'ตรวจเมื่อ 31 ส.ค. 2026', sourceAvailable: false, skills: [] };
 }
 
 export const monsterSkillTranslations = [
@@ -110,6 +115,28 @@ export const monsterSkillTranslations = [
   monster('Banshee', 3, 'Undead', '24 ก.ค. 2026', [
     ['A', 'Mind Pressure', 'แรงกดดันทางจิต'], ['B', 'Screaming Soul', 'วิญญาณกรีดร้อง'], ['M', 'Cry of Despair', 'เสียงร่ำไห้แห่งความสิ้นหวัง'], ['S1', 'Etherealize', 'แปรสภาพไร้กาย'], ['S2', 'Death Omen', 'ลางมรณะ'],
   ]),
+  pendingMonster('Minotaur', 4), pendingMonster('Griffon', 4), pendingMonster('Manticore', 4), pendingMonster('Unicorn', 4), pendingMonster('Grief Elemental', 4),
+  monster('Nightmare', 4, 'Elemental', '4 ส.ค. 2026', [
+    ['A', 'Mind Blast', 'ระเบิดพลังจิต'], ['B', 'Fear Devourer', 'ผู้กลืนกินความกลัว'], ['M', 'Nightmare Arrow', 'ศรฝันร้าย'], ['S1', 'Fear Aura', 'รัศมีความหวาดกลัว'], ['S2', 'Harvest of Fear', 'เก็บเกี่ยวความกลัว'],
+  ]),
+  pendingMonster('Sprout Knight', 4),
+  monster('Nosferatu', 4, 'Undead', '16 ส.ค. 2026', [
+    ['A', 'Quick Thrust', 'แทงฉับไว'], ['B', 'Blood Claw', 'กรงเล็บโลหิต'], ['M', 'Blood Rain', 'พิรุณโลหิต'], ['S1', 'Shadow Cloak', 'เสื้อคลุมเงา'], ['S2', 'Mist Step', 'ย่างก้าวหมอก'],
+  ]),
+  pendingMonster('Death Priest', 4), pendingMonster('Death Ranger', 4),
+  monster('Sphinx', 5, 'Beast', '23 ก.ค. 2026', [
+    ['A', 'Heavy Strike', 'โจมตีหนัก'], ['B', "Sphinx's Riddle", 'ปริศนาแห่งสฟิงซ์'], ['M', 'Hammer of Judgment', 'ค้อนพิพากษา'], ['S1', 'Scroll of Truth', 'คัมภีร์แห่งสัจจะ'], ['S2', 'Final Verdict', 'คำตัดสินสุดท้าย'],
+  ]),
+  monster('Basilisk', 5, 'Beast', '25 ส.ค. 2026', [
+    ['A', 'Poison Spray', 'พ่นพิษ'], ['B', "Basilisk's Venom", 'พิษแห่งบาซิลิสก์'], ['M', 'Breath of Decay', 'ลมหายใจแห่งความเสื่อมสลาย'], ['S1', 'Hex of Weakness', 'คำสาปอ่อนกำลัง'], ['S2', 'Toxin Release', 'ปลดปล่อยพิษ'],
+  ]),
+  monster('Cockatrice', 5, 'Beast', '16 ส.ค. 2026', [
+    ['A', 'Flash', 'แสงวาบ'], ['B', 'Petrifying Gaze', 'เนตรกลายเป็นหิน'], ['M', 'Death Ray', 'รังสีมรณะ'], ['S1', 'Shatter', 'แตกสลาย'], ['S2', 'Petrified Skin', 'ผิวศิลา'],
+  ]),
+  monster('Water Elemental', 5, 'Elemental', '14 ก.ค. 2026', [
+    ['A', 'Flash', 'แสงวาบ'], ['B', 'Song of Inspiration', 'บทเพลงแห่งแรงบันดาลใจ'], ['M', 'Dissonance', 'เสียงไม่ประสาน'], ['S1', 'Melody of Encouragement', 'ทำนองแห่งกำลังใจ'], ['S2', 'Song of Protection', 'บทเพลงแห่งการปกป้อง'],
+  ]),
+  pendingMonster('Air Elemental', 5), pendingMonster('Fire Elemental', 5), pendingMonster('Skeleton Lord', 5), pendingMonster('Vampire', 5), pendingMonster('Lich', 5),
 ] as const;
 
 export const monsterSkillCount = monsterSkillTranslations.reduce((total, entry) => total + entry.skills.length, 0);

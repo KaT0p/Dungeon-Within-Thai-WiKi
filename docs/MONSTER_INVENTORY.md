@@ -1,7 +1,7 @@
 # Dungeon Within — Monster Inventory
 
-สถานะ: **Phase 2.3c เสร็จแล้ว**  
-ตรวจล่าสุด: **28 สิงหาคม 2026**  
+สถานะ: **Phase 2.3d เสร็จแล้ว**
+ตรวจล่าสุด: **31 สิงหาคม 2026**
 เวอร์ชันเป้าหมาย: **0.6.0**  
 แหล่งหลัก: [Dungeon Within Wiki — Monsters](https://dungeonwithin.miraheze.org/wiki/Monsters)
 
@@ -142,7 +142,7 @@
 
 Minotaur, Griffon, Manticore, Unicorn, Grief Elemental, Sprout Knight, Death Priest, Death Ranger, Air Elemental, Fire Elemental, Skeleton Lord, Vampire, Lich, Gorgon, Phoenix, Vampire Lord, Night Crawler และ Death Knight
 
-## สิ่งที่ยังไม่สรุปหลัง Phase 2.3c
+## สิ่งที่ยังไม่สรุปหลัง Phase 2.3d
 
 - บทบาทของมอนสเตอร์แต่ละตัว
 - คำอธิบายและสูตรของ Base Attack, Innate Trait, Main Part และ Sub Parts สำหรับตัวที่ยังไม่มีหน้ารายละเอียด
@@ -162,3 +162,5 @@ Phase 2.3b ทำหน้าต้นแบบ 3 ตัวที่มีกล
 ตัวเลือกทั้งสามเป็นข้อเสนอเพื่อให้ Schema ครอบคลุมหลายรูปแบบ ไม่ใช่ Tier ranking
 
 Phase 2.3c แปลชื่อสกิลและชิ้นส่วนของมอนสเตอร์ Tier 1–3 ครบ 26 ตัว รวม 130 ชื่อ และเพิ่มหน้าค้นหาบนเว็บไซต์ รายละเอียดอยู่ใน [MONSTER_SKILL_TRANSLATIONS.md](./MONSTER_SKILL_TRANSLATIONS.md)
+
+Phase 2.3d ตรวจ Tier 4–5 ครบ 19 ตัว แปลได้ 30 ชื่อจาก 6 ตัวที่มีหน้ารายละเอียด และทำหน้าสถานะรอข้อมูลสำหรับอีก 13 ตัวที่ Wiki ยังเป็นลิงก์แดง
