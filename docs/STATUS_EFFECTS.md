@@ -2,7 +2,7 @@
 
 สถานะ: **รอบจอมมารเสร็จแล้ว**  
 ตรวจล่าสุด: **28 สิงหาคม 2026**  
-เวอร์ชันเป้าหมาย: **0.6.0**  
+เวอร์ชันเป้าหมาย: **0.6.2 Build 199**
 แหล่งหลัก: [Dungeon Within Wiki — Status Effects](https://dungeonwithin.miraheze.org/wiki/Status_Effects)
 
 > คำแปลทั้งหมดเป็นคำแปลของ Dungeon Within Thailand Wiki ไม่ใช่คำแปลทางการ ระยะเวลาและตัวเลขต้องตรวจซ้ำเมื่อมี Patch ใหม่

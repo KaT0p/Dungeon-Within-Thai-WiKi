@@ -2,7 +2,7 @@
 
 สถานะ: **พร้อมใช้เป็นคู่มือพื้นฐาน**  
 ตรวจล่าสุด: **27 สิงหาคม 2026**  
-เวอร์ชันเป้าหมาย: **0.6.0**  
+เวอร์ชันเป้าหมาย: **0.6.2 Build 199**
 แหล่งหลัก: [Dungeon Within Wiki — Stats](https://dungeonwithin.miraheze.org/wiki/Stats) และ [Combat](https://dungeonwithin.miraheze.org/wiki/Combat)
 
 > ข้อมูลตัวเลขและสูตรมาจาก Wiki ชุมชนซึ่งถอดความจาก Guidebook ในเกม ควรตรวจซ้ำในเกมเมื่อมี Patch ใหม่
@@ -112,7 +112,7 @@ Based on INT · Ranged · Spell · INT Attack Roll
 | **Initiative** | โบนัสกำหนดลำดับการลงมือ; สูตรที่ Wiki ระบุคือ `1d20 + DEX Modifier + Initiative Bonus` |
 | **Proficiency Bonus (PB)** | โบนัสจาก Tier ใช้กับ Attack Roll และการทอยด้วย Key Stat ตามเงื่อนไข |
 
-## สิ่งที่ต้องตรวจต่อในเกม v0.6.0
+## สิ่งที่ต้องตรวจต่อในเกม v0.6.2 Build 199
 
 - คำแปลไทยทางการของ STR, DEX, CON, INT, WIS และ CHA ใน UI
 - รายการ Damage Type ปัจจุบันทั้งหมดหลังการปรับระบบ Damage ใน v0.6

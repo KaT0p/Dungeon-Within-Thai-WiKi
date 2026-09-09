@@ -319,6 +319,20 @@ footer { display: flex; justify-content: space-between; padding: 24px clamp(24px
 .guide-evidence a { color: #74507f; font-size: 12px; }
 
 .systems-content { display: grid; gap: 64px; }
+.patch-panel { padding: 34px; border: 1px solid #d2c5d5; background: #f7f1f8; scroll-margin-top: 110px; }
+.patch-panel .section-title-row { align-items: start; }
+.patch-panel .section-title-row > div > p:last-child { max-width: 700px; margin: 8px 0 0; color: #746c75; font-size: 13px; line-height: 1.75; }
+.patch-panel .section-title-row > a { color: #6c4b75; font-size: 13px; white-space: nowrap; }
+.patch-highlight-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; }
+.patch-highlight-grid article { padding: 23px; border: 1px solid #d9cedb; background: #fff; }
+.patch-highlight-grid small { color: #98723f; font-size: 10px; text-transform: uppercase; }
+.patch-highlight-grid h3 { margin: 8px 0 10px; color: #3c333e; font: 21px Georgia,serif; }
+.patch-highlight-grid p { margin: 0; color: #6f6770; font-size: 13px; line-height: 1.75; }
+.patch-fixes { margin-top: 10px; padding: 24px; display: grid; grid-template-columns: .65fr 1.35fr; gap: 30px; color: #fff; background: #17111d; }
+.patch-fixes small { color: #c29b60; font-size: 10px; text-transform: uppercase; }
+.patch-fixes h3 { margin: 9px 0 0; font: 22px Georgia,serif; }
+.patch-fixes ul { margin: 0; padding-left: 18px; color: #aaa2ad; font-size: 13px; line-height: 1.8; }
+.patch-note-warning { margin: 10px 0 0; padding: 14px 16px; color: #6f6252; border-left: 3px solid #a47a3b; background: #eee4d5; font-size: 13px; line-height: 1.7; }
 .loop-flow { padding: 22px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #d7d0c8; background: #faf7f2; }
 .loop-flow span { font: 16px 'K2D',sans-serif; }
 .loop-flow i { color: #a6814a; font-style: normal; }
@@ -1003,6 +1017,7 @@ footer { display: flex; justify-content: space-between; padding: 24px clamp(24px
   .core-loop { grid-template-columns: repeat(2,1fr); }
   .authority-plan { grid-template-columns: 1fr; }
   .content-split, .license-panel { grid-template-columns: 1fr; }
+  .patch-highlight-grid, .patch-fixes { grid-template-columns: 1fr; }
   .system-guide-link { grid-template-columns: 130px 190px 1fr; }
   .system-guide-link > b { grid-column: 2/-1; }
   .workshop-summary, .workshop-order > div:last-of-type { grid-template-columns: repeat(2,1fr); }

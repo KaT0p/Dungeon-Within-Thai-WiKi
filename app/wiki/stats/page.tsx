@@ -33,7 +33,7 @@ export default function StatsPage() {
 
       <section className="skill-reading"><div className="section-title-row"><h2>ตัวอย่างการอ่านหนึ่งสกิล</h2><span>แยกทุกคำออกจากกัน</span></div><div className="skill-sample"><code>3d8 + INT Necrotic Damage</code><p>Based on INT · Ranged · Spell · INT Attack Roll</p></div><ul><li><b>3d8</b> ทอยลูกเต๋า 8 หน้า 3 ลูก แล้วรวมกัน (3–24)</li><li><b>+ INT</b> บวก INT Modifier ไม่ใช่คะแนน INT ดิบ</li><li><b>INT Attack Roll</b> ใช้ INT Modifier ในการทอยให้โดน</li><li><b>Ranged</b> โจมตีแนวหลังได้ตามกฎเป้าหมาย</li><li><b>Spell</b> ทำให้โต้ตอบกับเอฟเฟกต์ที่ระบุ Spell</li><li><b>Necrotic</b> คือชนิด Damage ที่ใช้ตรวจ Resistance/Immunity/Vulnerability</li></ul><div className="reading-order"><b>ลำดับตอนใช้จริง</b><span>① ทอย Attack Roll → ② เทียบ AC → ③ ถ้าโดน ทอย 3d8 และบวก INT Modifier → ④ ตรวจการต้านทาน Necrotic</span></div></section>
 
-      <div className="inline-warning">ข้อมูลสูตรอิงหน้า Stats และ Combat ของ Wiki ชุมชนซึ่งถอดความจาก Guidebook ในเกม ตัวเลขที่อาจเปลี่ยนตาม Patch จะต้องตรวจซ้ำกับ v0.6.0</div>
+      <div className="inline-warning">ข้อมูลสูตรอิงหน้า Stats และ Combat ของ Wiki ชุมชนซึ่งถอดความจาก Guidebook ในเกม ต้องตรวจซ้ำกับ v0.6.2 Build 199 โดย v0.6.1 เปลี่ยนโบนัสจาก Ability Modifier จาก Dice Count Bonus (%) เป็น Dice Damage Bonus (%) และ v0.6.2 ปรับโบนัส Awakening เป็น 4–8</div>
     </section><SiteFooter />
   </main>;
 }

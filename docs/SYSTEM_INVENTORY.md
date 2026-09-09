@@ -2,7 +2,7 @@
 
 > สถานะ: สำรวจโครงสร้างระบบรอบแรกเสร็จแล้ว  
 > วันที่ตรวจสอบ: 2026-08-27  
-> เวอร์ชันเป้าหมาย: v0.6.0  
+> เวอร์ชันเป้าหมาย: v0.6.2 Build 199
 > ข้อควรระวัง: การมีชื่อระบบในบัญชีนี้ไม่ได้แปลว่ารายละเอียดทั้งหมดผ่านการตรวจในเกมแล้ว
 
 เอกสารนี้ตอบคำถามว่า Dungeon Within มีระบบหลักอะไร แต่ละระบบทำหน้าที่ตรงไหน เชื่อมต่อกันอย่างไร และส่วนใดต้องตรวจซ้ำกับเกม Build ปัจจุบัน
@@ -39,17 +39,17 @@
 
 ## 2. แผนผังระบบหลัก
 
-| System ID | ระบบ | ช่วงใช้งาน | หน้าที่หลัก | สถานะ v0.6.0 |
+| System ID | ระบบ | ช่วงใช้งาน | หน้าที่หลัก | สถานะ v0.6.2 |
 |---|---|---|---|---|
 | `system-run-setup` | Run Setup | ก่อนเริ่ม Run | เลือกจอมมาร สกิน แคมเปญ และบททดสอบ | ต้องตรวจ UI |
-| `system-node-map` | Node Map | ระหว่าง Run | เลือกเหตุการณ์ประจำวันและเส้นทาง | พบข้อมูลหลัง v0.6.0 บางส่วน |
+| `system-node-map` | Node Map | ระหว่าง Run | เลือกเหตุการณ์ประจำวันและเส้นทาง | ต้องตรวจ Build 199 |
 | `system-dungeon-layout` | Dungeon Layout | ระหว่าง Run | วางสิ่งปลูกสร้างและมอนสเตอร์ | ต้องตรวจรายละเอียดปัจจุบัน |
-| `system-combat` | Combat | ระหว่าง Run | ต่อสู้อัตโนมัติระหว่างมอนสเตอร์กับฮีโร่ | ต้องตรวจรอบเวลา v0.6.0 |
+| `system-combat` | Combat | ระหว่าง Run | ต่อสู้อัตโนมัติระหว่างมอนสเตอร์กับฮีโร่ | ต้องตรวจรอบเวลา v0.6.2 |
 | `system-rewards` | Rewards | หลัง Node/การต่อสู้ | รับทรัพยากร มอนสเตอร์ Relic และ Part | ต้องทำบัญชีรางวัล |
 | `system-monster-growth` | Monster Growth | ระหว่าง/ข้าม Run | ฝึก เลื่อนขั้น หลอมรวม และย้ายคุณสมบัติ | มีการเปลี่ยนหลายเวอร์ชัน |
-| `system-facility-growth` | Facility Growth | ระหว่าง/ข้าม Run | Modify, Promote, Combine, Attach และ Relocate | ปรับต่อเนื่องถึง v0.6.0 |
+| `system-facility-growth` | Facility Growth | ระหว่าง/ข้าม Run | Modify, Repeat Modification, Promote, Combine, Attach และ Relocate | ปรับต่อเนื่องถึง v0.6.2 |
 | `system-dark-lord-growth` | Dark Lord Growth | ระหว่าง/ข้าม Run | Level, Trait, Promotion, Ascension และ Aspect | เปลี่ยนครั้งใหญ่ใน v0.6.0 |
-| `system-ark` | Ark of Memory | ข้าม Run | เก็บมอนสเตอร์ สิ่งปลูกสร้าง และ Part บางชนิด | ต้องตรวจข้อจำกัด v0.6.0 |
+| `system-ark` | Ark of Memory | ข้าม Run | เก็บมอนสเตอร์ สิ่งปลูกสร้าง และ Part บางชนิด | ต้องตรวจข้อจำกัด v0.6.2 |
 | `system-workshop` | Architect's Workshop | นอก Run | ปลดล็อกฟังก์ชันและอัปเกรดถาวร | หน้า Wiki มีข้อมูล v0.5–0.6 ปะปน |
 | `system-codex` | Codex | นอก Run | บันทึกสิ่งที่เคยพบและเปิดดูข้อมูล | ต้องตรวจขอบเขตข้อมูลจริง |
 | `system-trading` | Trading Post | นอก Run | แลก Forgotten Gold เป็นทรัพยากร | ต้องตรวจอัตราแลกเปลี่ยน |
@@ -76,8 +76,8 @@ Wiki ระบุว่าสามารถเลือกแคมเปญผ
 
 | Campaign | ระบบที่เพิ่มตาม Wiki | สถานะ |
 |---|---|---|
-| Frontline Expansion | การขยายดันเจี้ยนและ Facility Combination | ต้องตรวจ v0.6.0 |
-| Heroes of Myth | Myth และ Mythic Boss | ต้องตรวจ v0.6.0 |
+| Frontline Expansion | การขยายดันเจี้ยนและ Facility Combination | ต้องตรวจ v0.6.2 |
+| Heroes of Myth | Myth และ Mythic Boss | ต้องตรวจ v0.6.2 |
 | War of the Gods | Demon Lords และ Goddess Blessings | ต้องตรวจคำเรียกจาก UI |
 
 สิ่งที่ยังขาด:
@@ -104,10 +104,11 @@ Wiki ระบุว่าสามารถเลือกแคมเปญผ
 | Iron | เพิ่ม AC และ Saving Throw ศัตรู | ต้องตรวจค่าปัจจุบัน |
 | Armament | เพิ่ม Sub Part ให้ Elite และ Boss | ต้องตรวจค่าปัจจุบัน |
 | Dominion | เพิ่ม Dominance Cost ของมอนสเตอร์และสิ่งปลูกสร้าง | ต้องตรวจค่าปัจจุบัน |
-| Drought | ลดการฟื้นฟูและ Temporary HP ฝ่ายเรา | ต้องตรวจค่าปัจจุบัน |
+| Drought | เพิ่มการฟื้นฟูของศัตรู | ปรับใน v0.6.1; ต้องตรวจค่าต่อระดับ |
 | Origin | เพิ่ม Trait ให้ Elite และ Boss | ต้องตรวจค่าปัจจุบัน |
 | Intervals | เพิ่ม Cooldown ของ Facility | ต้องตรวจหลังระบบเวลา v0.6.0 |
-| Invincibility | ศัตรูอมตะชั่วคราวเมื่อเข้าการต่อสู้ครั้งแรก | ต้องตรวจค่าปัจจุบัน |
+| Invincibility | ศัตรูอมตะชั่วคราวเมื่อเข้าการต่อสู้ครั้งแรก | Release Note v0.6.2 ระบุว่าถูกแทนด้วย Assault |
+| Assault | ต้องตรวจผลในเกม | เพิ่มใน v0.6.2; Store กับ Release Note ระบุชื่อ Trial เดิมที่ถูกแทนไม่ตรงกัน |
 | Ability | เพิ่มค่าสถานะหลักของศัตรู | ต้องตรวจค่าปัจจุบัน |
 
 ### 3.4 Toggles
@@ -126,9 +127,9 @@ Wiki ระบุว่าหนึ่งวันมีตัวเลือก
 | Node | หน้าที่ | รางวัลที่ Wiki ระบุ | สถานะ |
 |---|---|---|---|
 | Normal Battle | การต่อสู้ทั่วไป | Dream Dust, Forgotten Coins, Standard Reward Pack | ต้องตรวจชื่อและจำนวน |
-| Elite Battle | ศัตรูยากขึ้น รางวัลดีขึ้น | เพิ่ม Parchments, Relic และ Dark Lord Ascension | ต้องตรวจ v0.6.0 |
-| Mid-Boss Battle | บอสกลางด่านและเป็นเส้นทางบังคับ | Premium Reward Pack และรางวัลระดับสูงขึ้น | ต้องตรวจ v0.6.0 |
-| Final Battle | บอสท้ายด่าน | Memory Fragment, Relic, Ascension และ Premium Reward Pack | ต้องตรวจ v0.6.0 |
+| Elite Battle | ศัตรูยากขึ้น รางวัลดีขึ้น | เพิ่ม Parchments, Relic และ Dark Lord Ascension | ต้องตรวจ v0.6.2 |
+| Mid-Boss Battle | บอสกลางด่านและเป็นเส้นทางบังคับ | Premium Reward Pack และรางวัลระดับสูงขึ้น | ต้องตรวจ v0.6.2 |
+| Final Battle | บอสท้ายด่าน | Memory Fragment, Relic, Ascension และ Premium Reward Pack | ต้องตรวจ v0.6.2 |
 
 ### 4.2 Item Nodes
 
@@ -176,11 +177,11 @@ Wiki ระบุว่าหนึ่งวันมีตัวเลือก
 - Attachment และ Facility Combination
 - ห้องหลายช่องใน Frontline Expansion
 
-### 5.3 จุดที่ต้องตรวจ v0.6.0
+### 5.3 จุดที่ต้องตรวจ v0.6.2
 
 - เวลาทำงานและ Cooldown หลังระบบเปลี่ยนจาก Turn เป็นเวลาเฉพาะตัว
 - สูตรความทนทานของกับดัก
-- วิธีลด Dominance Cost จาก Promotion
+- ค่าโบนัส All Ability Modifiers จาก Facility Modification/Promotion และ Repeat Modification หลัง v0.6.1
 - กฎการรวม Facility และการเก็บใน Ark
 - ขนาดแผนผังปกติและ Frontline Expansion
 - พฤติกรรมฮีโร่เมื่อ Hunting Ground เต็ม
@@ -215,7 +216,7 @@ Resistance
 Immunity
 ```
 
-สถานะ: **ต้องตรวจใหม่ในเกม v0.6.0** เพราะ Release Note ระบุว่ามีการปรับ Ability Score, Dice Damage, Damage Type และระบบเวลาของ Effect
+สถานะ: **ต้องตรวจใหม่ในเกม v0.6.2 Build 199** เพราะ Release Note v0.6.0–0.6.2 ปรับ Ability Score, Dice Damage, Ability Modifier, Awakening และระบบเวลาของ Effect ต่อเนื่องกัน
 
 ### 6.3 ข้อมูลที่ยังห้ามนำไปทำเครื่องคำนวณ
 
@@ -235,12 +236,12 @@ Immunity
 
 | ระบบ | ผล | จุดที่ต้องตรวจ |
 |---|---|---|
-| Train | เพิ่มค่าสถานะ | Repeat Training ใน v0.6.0 เปลี่ยนข้อจำกัดอย่างไร |
-| Promote | รวมตัวเหมือนกันเพื่อเพิ่มขั้น | จำนวนที่ใช้และผลต่อค่าสถานะ |
+| Train | เพิ่มค่าสถานะ | Repeat Training และโบนัส Training ใน Tooltip v0.6.2 |
+| Promote | รวมตัวเหมือนกันเพื่อเพิ่มขั้น | v0.6.2 เพิ่มโบนัสเป็นสองเท่าและยกเลิก Dominance penalty; จำนวนที่ใช้ยังต้องตรวจ |
 | Fuse | รวมมอนสเตอร์เพื่อสุ่มตัวระดับสูงกว่า | โอกาสและเงื่อนไข Grade/Tier |
 | Sacrifice | สละมอนสเตอร์เพื่อพัฒนาจอมมาร | EXP และ Trait ที่ได้รับ |
 | Parts | ติดตั้งความสามารถเพิ่มเติม | Main/Sub/Ethereal และ Dominance Cost |
-| Variant | รูปแบบพิเศษของมอนสเตอร์ | เงื่อนไขและผลต่อข้อมูลพื้นฐาน |
+| Variant | รูปแบบพิเศษของมอนสเตอร์ | v0.6.2 เพิ่ม Variant Research ซึ่งใช้จำนวนครั้งการ Extract เพิ่ม Ability Score ให้ชนิดนั้นทั้งหมด |
 
 ### 7.2 จอมมาร
 
@@ -339,7 +340,7 @@ Immunity
 
 ### สิ่งที่ยังไม่ทราบแน่ชัด
 
-- จำนวนด่านทั้งหมดของ Run ปกติใน v0.6.0
+- จำนวนด่านทั้งหมดของ Run ปกติใน v0.6.2
 - เงื่อนไขถือว่า Run “สำเร็จ” ในทุก Campaign
 - สิ่งที่คงอยู่หลังแพ้กับสิ่งที่คงอยู่หลังชนะ
 - ความต่างของ Game Over, Battle Retry และการเริ่มวันใหม่
@@ -366,7 +367,7 @@ Immunity
 - [ ] ราคาและลำดับปลดล็อก Architect's Workshop
 - [ ] Reward Table ของแต่ละ Node
 - [ ] กฎ Ark of Memory และ Transfer
-- [ ] สูตร Combat หลัง v0.6.0
+- [ ] สูตร Combat หลัง v0.6.2 Build 199
 - [ ] ขนาดและกฎ Dungeon Layout ทุกโหมด
 - [ ] Underworld Quests และ Trading Post
 
@@ -401,4 +402,3 @@ Immunity
 - [x] มีบัญชีความยาก โหมด และข้อมูลเงื่อนไขจบที่ยังขาด
 - [x] มีรายการช่องว่างที่ต้องเก็บจากเกม
 - [x] ทุกส่วนแยกข้อมูลที่พบออกจากข้อมูลที่ยืนยันแล้ว
-

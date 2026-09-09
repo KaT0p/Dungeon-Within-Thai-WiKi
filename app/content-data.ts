@@ -1,6 +1,7 @@
 export const integrationStatus = {
-  gameVersion: '0.6.0',
-  updatedAt: '31 ส.ค. 2026',
+  gameVersion: '0.6.2',
+  gameBuild: 199,
+  updatedAt: '9 ก.ย. 2026',
   completedTopics: 19,
   nextTopic: 'ทำบัญชีศัตรูและผู้บุกรุก',
 };
@@ -267,12 +268,12 @@ export const coreSystems = [
   ['Node Map', 'ระหว่าง Run', 'เลือก Battle, Merchant, Event หรือจุดพัฒนาในแต่ละวัน'],
   ['Dungeon Layout', 'ระหว่าง Run', 'วางมอนสเตอร์ สนามล่า กับดัก และโครงสร้างสนับสนุน'],
   ['Combat', 'ระหว่าง Run', 'ต่อสู้อัตโนมัติด้วยตำแหน่ง สกิล และการทอยค่าต่าง ๆ'],
-  ['Monster Growth', 'ระหว่าง/ข้าม Run', 'Train, Promote, Fuse, Sacrifice และติดตั้ง Part'],
-  ['Facility Growth', 'ระหว่าง/ข้าม Run', 'Modify, Promote, Combine, Attach และ Relocate'],
+  ['Monster Growth', 'ระหว่าง/ข้าม Run', 'Train, Promote, Fuse, Sacrifice, Variant Research และติดตั้ง Part'],
+  ['Facility Growth', 'ระหว่าง/ข้าม Run', 'Modify, Repeat Modification, Promote, Combine, Attach และ Relocate'],
   ['Dark Lord Growth', 'ระหว่าง/ข้าม Run', 'Trait, Promotion, Ascension, Aspect และ Authority'],
   ['Ark of Memory', 'ข้าม Run', 'เก็บมอนสเตอร์ สิ่งปลูกสร้าง และข้อมูลบางส่วนไปใช้รอบถัดไป'],
   ["Architect's Workshop", 'นอก Run', 'ปลดล็อกฟังก์ชันและอัปเกรดถาวร'],
-  ['Trials & Difficulty', 'ก่อน Run', 'ปรับความยากและรับรางวัล First Clear'],
+  ['Trials & Difficulty', 'ก่อน Run', 'ปรับความยาก เลือกแคมเปญ และรับรางวัล First Clear'],
 ] as const;
 
 export const glossaryTerms = [
@@ -281,6 +282,8 @@ export const glossaryTerms = [
   ['Trial', 'บททดสอบ', 'ใช้ใน Wiki'], ['Ark of Memory', 'Ark of Memory (คลังความทรงจำ)', 'คงอังกฤษ'],
   ["Architect's Workshop", "Architect's Workshop (เวิร์กช็อปสถาปนิก)", 'คงอังกฤษ'], ['Codex', 'สารานุกรม', 'ใช้ใน Wiki'],
   ['Promotion', 'เลื่อนขั้น', 'ใช้ใน Wiki'], ['Ascension', 'จุติ', 'ใช้ใน Wiki'], ['Aspect', 'Aspect (แอสเปกต์)', 'คงอังกฤษ'],
+  ['Variant Research', 'วิจัยมอนสเตอร์ร่างพิเศษ', 'คำแปลแฟนเมด'], ['Tactical Map', 'แผนที่ยุทธวิธี', 'คำแปลแฟนเมด'],
+  ['Trial of Assault', 'บททดสอบแห่งการจู่โจม', 'คำแปลแฟนเมด'], ['Repeat Modification', 'ปรับแต่งซ้ำ', 'คำแปลแฟนเมด'],
   ['Part', 'ชิ้นส่วน', 'ใช้ใน Wiki'], ['Main Part', 'ชิ้นส่วนหลัก', 'ใช้ใน Wiki'], ['Sub Part', 'ชิ้นส่วนเสริม', 'ใช้ใน Wiki'],
   ['Relic', 'วัตถุโบราณ / ไอเทมเสริม', 'คงอังกฤษในชื่อหมวด'], ['Dream Dust', 'ผงความฝัน', 'คงอังกฤษในหน้าระบบ'], ['Chest', 'หีบรางวัล', 'ใช้ใน Wiki'],
   ['Ethereal Part', 'Ethereal Part (ชิ้นส่วนชั่วคราว)', 'ต้องตรวจในเกม'], ['Skill', 'สกิล', 'ใช้ใน Wiki'],

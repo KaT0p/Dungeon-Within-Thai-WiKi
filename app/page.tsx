@@ -9,7 +9,7 @@ import { relics } from './items-data';
 import { monsterSkillTranslations } from './monster-skills-data';
 
 const searchIndex = [
-  { title: 'ระบบเกม', description: 'Run, Node, Combat และความก้าวหน้าข้าม Run', category: 'ระบบ', href: '/wiki/systems', keywords: 'system ark combat node run ระบบ เกม' },
+  { title: 'ระบบเกม', description: 'Run, Node, Combat และความก้าวหน้าข้าม Run', category: 'ระบบ', href: '/wiki/systems', keywords: 'system ark combat node run variant research tactical map trial assault ระบบ เกม วิจัยมอนสเตอร์ แผนที่ยุทธวิธี' },
   { title: "Architect's Workshop", description: 'ลำดับปลดล็อก เครื่องมือถาวร ค่าใช้จ่าย และสายพึ่งพา', category: 'ระบบ', href: '/wiki/architects-workshop', keywords: 'architect workshop essence chamber ark memory trading post codex dismantle sacrifice transfer abyssal ink fragment hourglass เวิร์กช็อป ปลดล็อก ถาวร' },
   { title: 'ค่าสถานะและ Key Stat', description: 'STR, DEX, CON, INT, WIS, CHA และสูตร Modifier', category: 'ระบบ', href: '/wiki/stats', keywords: 'stats key stat strength dexterity constitution intelligence wisdom charisma กายภาพ เวทมนตร์ physical magic modifier attack roll saving throw' },
   { title: 'เอฟเฟกต์สถานะ', description: 'ชื่อไทยและผลของ Buff, Debuff และเอฟเฟกต์พื้นที่', category: 'ระบบ', href: '/wiki/status-effects', keywords: statusEffects.map((effect)=>`${effect.en} ${effect.th} ${effect.summary}`).join(' ') },
@@ -32,14 +32,14 @@ const categories = [
   { icon: '⌁', title: 'ห้องและกับดัก', description: '41 รายการ · ผัง 3×3 และชุดแนะนำ', tone: 'rose', href: '/wiki/facilities' },
   { icon: '◆', title: 'ไอเทมและอุปกรณ์', description: '87 Relics · คู่มือช่อง Part', tone: 'amber', href: '/wiki/items' },
   { icon: '⌘', title: 'ระบบเกม', description: '10 ระบบหลักและวงจรการเล่น', tone: 'rose', href: '/wiki/systems' },
-  { icon: 'A', title: 'ศัพท์ในเกม', description: '40 คำแกนหลักที่ค้นหาได้', tone: 'amber', href: '/wiki/glossary' },
+  { icon: 'A', title: 'ศัพท์ในเกม', description: `${glossaryTerms.length} คำแกนหลักที่ค้นหาได้`, tone: 'amber', href: '/wiki/glossary' },
   { icon: '◎', title: 'แหล่งข้อมูล', description: 'ที่มา สิทธิ์ และการตรวจสอบ', tone: 'teal', href: '/wiki/sources' },
 ];
 
 const updates = [
+  { category: 'Patch v0.6.2', title: 'Variant Research และการปรับ Monster Promotion', description: 'สรุประบบใหม่ การเปลี่ยน Ability Score และรายการที่ต้องตรวจต่อใน Build 199', href: '/wiki/systems#version-062' },
   { category: 'Phase 2.5b', title: 'Demon Lord Relics', description: 'เพิ่ม War of the Gods 28 ชิ้น แยกชุด Tania, Lilith และ Meryelle พร้อมตัวกรอง', href: '/wiki/items#relic-catalog' },
   { category: 'Phase 2.4b', title: 'แนวทางจัดผังและชุดกับดัก', description: 'ผัง 3×3 สามแบบ ชุดแนะนำตามจอมมาร และคู่ห้องที่นำไปทดลองใน Run ได้', href: '/wiki/facilities#layout-guide' },
-  { category: 'Phase 2.2d', title: 'แนวทางเล่น Dark Lords', description: 'โครงทีม ลำดับ Authority แผนต้น–กลาง–ท้าย Run และข้อผิดพลาดของจอมมารทั้ง 3 ตัว', href: '/wiki/dark-lords' },
 ];
 
 export default function Home() {

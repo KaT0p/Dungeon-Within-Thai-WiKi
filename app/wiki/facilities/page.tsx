@@ -55,7 +55,7 @@ export default function FacilitiesPage() {
   }, [query, kind, rarity]);
 
   return <main className="hub-page"><SiteHeader />
-    <section className="data-hero facility-hero"><p className="breadcrumbs"><a href="/wiki">คลังข้อมูล</a><span>/</span>ห้องและกับดัก</p><p className="eyebrow"><span /> Phase 2.4</p><h1>ห้อง กับดัก และ<br />โครงสร้างสนับสนุน</h1><p>ดูหน้าที่ พื้นที่ออกผล สูตรความเสียหาย และข้อควรระวังก่อนวางสิ่งปลูกสร้างแต่ละชนิดในดันเจี้ยน</p><div className="data-warning"><b>สถานะข้อมูล</b><span>แปลจากหน้า Facilities ของ Wiki ชุมชน ตัวเลขทั้งหมดควรตรวจซ้ำในเกมเวอร์ชัน 0.6.0</span></div></section>
+    <section className="data-hero facility-hero"><p className="breadcrumbs"><a href="/wiki">คลังข้อมูล</a><span>/</span>ห้องและกับดัก</p><p className="eyebrow"><span /> Phase 2.4</p><h1>ห้อง กับดัก และ<br />โครงสร้างสนับสนุน</h1><p>ดูหน้าที่ พื้นที่ออกผล สูตรความเสียหาย และข้อควรระวังก่อนวางสิ่งปลูกสร้างแต่ละชนิดในดันเจี้ยน</p><div className="data-warning"><b>สถานะข้อมูล</b><span>แปลจากหน้า Facilities ของ Wiki ชุมชน ตัวเลขทั้งหมดควรตรวจซ้ำในเกมเวอร์ชัน 0.6.2 Build 199 ซึ่งปรับ Facility และแก้พฤติกรรม Trap บางรายการ</span></div></section>
 
     <section className="hub-content facility-content">
       <div className="facility-summary"><article><span>♞</span><div><small>Hunting Grounds</small><b>{facilityCounts.huntingGrounds} สนามล่า</b><p>วางมอนสเตอร์ได้ 1–4 ตัว แบ่งแนวหน้า 2 และแนวหลัง 2</p></div></article><article><span>⌁</span><div><small>Traps</small><b>{facilityCounts.traps} กับดัก</b><p>สร้างความเสียหายหรือสถานะเมื่อฝ่ายฮีโร่ปลดกับดักไม่สำเร็จ</p></div></article><article><span>◇</span><div><small>Structures</small><b>{facilityCounts.structures} โครงสร้าง</b><p>เสริมพลังห้อง กับดัก หรือมอนสเตอร์ และถูกนับเป็นห้องว่าง</p></div></article></div>

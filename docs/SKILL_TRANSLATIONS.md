@@ -2,7 +2,7 @@
 
 สถานะ: **รอบแรกเสร็จแล้ว**  
 ตรวจล่าสุด: **28 สิงหาคม 2026**  
-เวอร์ชันเป้าหมาย: **0.6.0**  
+เวอร์ชันเป้าหมาย: **0.6.2 Build 199**
 แหล่งหลัก: [Desponia](https://dungeonwithin.miraheze.org/wiki/Desponia), [Aura](https://dungeonwithin.miraheze.org/wiki/Aura) และ [Rhea](https://dungeonwithin.miraheze.org/wiki/Rhea)
 
 ## รูปแบบที่ใช้บนเว็บ

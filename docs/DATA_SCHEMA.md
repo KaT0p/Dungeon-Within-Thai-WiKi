@@ -127,7 +127,7 @@ content/guides/getting-started.md
   "summary_th": "ตัวอย่างโครงสร้างข้อมูลเท่านั้น",
   "aliases": [],
   "tags": ["needs-data"],
-  "game_version": "0.6.0",
+  "game_version": "0.6.2",
   "game_build": null,
   "verification_status": "needs_review",
   "verified_at": null,
@@ -478,7 +478,7 @@ entity_type: guide
 title_th: ชื่อคู่มือ
 title_en: Example Guide
 summary_th: คำอธิบายแบบสั้น
-game_version: 0.6.0
+game_version: 0.6.2
 game_build: null
 verification_status: needs_review
 author_ids: []
@@ -507,7 +507,7 @@ license: project-original
   "file": "media/example.png",
   "media_type": "screenshot",
   "subject_id": "monster-example",
-  "game_version": "0.6.0",
+  "game_version": "0.6.2",
   "game_build": null,
   "captured_at": "2026-08-27",
   "captured_by": null,
@@ -590,4 +590,3 @@ license: project-original
 - [x] มีรูปแบบสื่อและสิทธิ์การเผยแพร่
 - [x] มี Validation และกฎเปลี่ยน Schema
 - [x] มีรายการทดลองก่อนเริ่มเก็บข้อมูลจำนวนมาก
-

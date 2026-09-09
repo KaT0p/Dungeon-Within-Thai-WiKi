@@ -1,9 +1,9 @@
 # Dungeon Within Thailand Wiki — แหล่งข้อมูลและนโยบายอ้างอิง
 
 > สถานะเอกสาร: ตรวจสอบรอบแรกแล้ว  
-> วันที่ตรวจสอบ: 2026-08-27  
-> เวอร์ชันเกมหลักที่ติดตาม: **v0.6.0**  
-> Build ล่าสุดที่พบใน Release Note ทางการ: **Build 195**
+> วันที่ตรวจสอบ: 2026-09-09
+> เวอร์ชันเกมหลักที่ติดตาม: **v0.6.2**
+> Build ล่าสุดที่พบใน Release Note ทางการ: **Build 199**
 
 เอกสารนี้กำหนดว่าแหล่งใดใช้ยืนยันข้อมูลประเภทใด และต้องบันทึกเครดิตอย่างไร ข้อมูลในเว็บไซต์ห้ามถูกยกระดับเป็น `ตรวจสอบแล้ว` หากไม่มีแหล่งที่เหมาะสมรองรับ
 
@@ -13,8 +13,8 @@
 
 | แหล่งข้อมูล | ลิงก์ | ใช้สำหรับ | หมายเหตุ |
 |---|---|---|---|
-| GameCoaster Release Notes (EN) | [Dungeon Within Release Note](https://gamecoaster.notion.site/Dungeon-Within-Release-Note-EN-32e4966ac9c3808bba34f56a92457d39) | Patch Notes, Build, ระบบใหม่, การแก้สมดุล | แหล่งหลักสำหรับติดตามการเปลี่ยนแปลง ปัจจุบันพบรายการ v0.6.0 ถึง Build 195 |
-| Apple App Store | [Dungeon Within](https://apps.apple.com/us/app/dungeon-within/id6761328517) | เวอร์ชันที่เผยแพร่, ประวัติเวอร์ชัน, ข้อมูลแอป | App Store แสดง v0.6.0 และรายละเอียดระบบหลักของ Build 190 |
+| GameCoaster Release Notes (EN) | [Dungeon Within Release Note](https://gamecoaster.notion.site/Dungeon-Within-Release-Note-EN-32e4966ac9c3808bba34f56a92457d39) | Patch Notes, Build, ระบบใหม่, การแก้สมดุล | แหล่งหลักสำหรับติดตามการเปลี่ยนแปลง ปัจจุบันพบ v0.6.2 Build 199 |
+| Apple App Store | [Dungeon Within](https://apps.apple.com/us/app/dungeon-within/id6761328517) | เวอร์ชันที่เผยแพร่, ประวัติเวอร์ชัน, ข้อมูลแอป | App Store แสดง v0.6.2 และสรุปการเปลี่ยนแปลงหลัก |
 | Google Play | [Dungeon Within](https://play.google.com/store/apps/details?id=com.GameCoaster.DungeonWithin) | เวอร์ชัน Android, รายละเอียดเกม, ช่องทางสนับสนุน | บางประเทศหรือแคชการค้นหาอาจแสดง Patch ช้ากว่า App Store |
 | GameCoaster | [เว็บไซต์ผู้พัฒนา](https://www.gamecoaster.com/) | ยืนยันผู้พัฒนาและลิงก์ทางการ | ไม่ใช่แหล่งรายละเอียดค่าสถานะรายตัว |
 | GameCoaster Official Discord | [Discord Server](https://discord.com/servers/gamecoaster-official-496757856662585385) | ประกาศ ข่าว และตรวจสอบคำถามกับชุมชน | ต้องเก็บลิงก์หรือภาพหลักฐานของประกาศที่นำมาอ้างอิง |
@@ -43,8 +43,8 @@
 ข้อมูลกำกับที่ต้องบันทึกทุกครั้ง:
 
 ```yaml
-game_version: 0.6.0
-build: 195
+game_version: 0.6.2
+build: 199
 platform: iOS | Android
 language: English | Korean | Japanese | Chinese
 captured_at: YYYY-MM-DD
@@ -124,7 +124,7 @@ verification_status: verified | needs-review
 
 ## 6. ความเสี่ยงของข้อมูลล้าสมัย
 
-Wiki อังกฤษเริ่มต้นในช่วงที่เกมยังเปลี่ยนแปลงรวดเร็ว และหน้าหลักระบุว่าแก้ไขล่าสุดเมื่อ 24 กรกฎาคม 2026 ขณะที่ v0.6.0 เผยแพร่ในเดือนสิงหาคม 2026 ดังนั้นข้อมูลต่อไปนี้ต้องถือว่า `ต้องตรวจสอบ` จนกว่าจะเทียบกับ Build ปัจจุบัน:
+Wiki อังกฤษเริ่มต้นในช่วงที่เกมยังเปลี่ยนแปลงรวดเร็ว และข้อมูลหลายหน้าเขียนก่อนชุดอัปเดต v0.6.0–0.6.2 ดังนั้นข้อมูลต่อไปนี้ต้องถือว่า `ต้องตรวจสอบ` จนกว่าจะเทียบกับ Build 199:
 
 - Dark Lord Promotion, Ascension และ Aspect ซึ่งเพิ่มหรือปรับใน v0.6.0
 - Ethereal/Intangible Parts และ Repeat Training
@@ -133,6 +133,8 @@ Wiki อังกฤษเริ่มต้นในช่วงที่เก
 - Effect ที่เคยอิง Turn และเปลี่ยนเป็นระยะเวลาเฉพาะตัว
 - Facility Relocation และ Facility Combination
 - Ability, Facility, Relic และ Trial ที่ถูกปรับสมดุล
+- Monster Promotion, Awakening Stage และ Variant Research ที่ปรับใน v0.6.2
+- Memento Mori War Room, Tactical Map, Facility Repeat Modification และ Ascension and Curses Campaign ที่เพิ่มใน v0.6.1
 - ข้อมูลก่อน v0.5.0 ซึ่งอาจใช้กับ Save หรือระบบเก่าที่ไม่เข้ากัน
 - Build และ Tier list ที่ไม่ได้ระบุเวอร์ชัน
 
@@ -146,9 +148,9 @@ value: ข้อมูลที่บันทึก
 source_type: in-game | official-note | store | community-wiki | community-test
 source_url: https://...
 source_revision: revision-id-if-available
-game_version: 0.6.0
-build: 195
-accessed_at: 2026-08-27
+game_version: 0.6.2
+build: 199
+accessed_at: 2026-09-09
 language: English
 license: proprietary | CC-BY-SA-4.0 | unknown
 status: verified | needs-review | obsolete
@@ -163,15 +165,15 @@ notes: บริบทหรือข้อขัดแย้งที่พบ
 - [x] มีนโยบายจัดการข้อมูลขัดแย้ง
 - [x] ตรวจสัญญาอนุญาตข้อความของ Wiki ต้นทาง
 - [x] แยกสิทธิ์ข้อความออกจากสิทธิ์ภาพ
-- [x] มีรายการข้อมูลที่เสี่ยงล้าสมัยหลัง v0.6.0
+- [x] มีรายการข้อมูลที่เสี่ยงล้าสมัยถึง v0.6.2
 - [x] มี Template สำหรับบันทึกแหล่งอ้างอิง
 
 ## หมายเหตุการตรวจสอบรอบนี้
 
-- App Store แสดง Dungeon Within เวอร์ชัน 0.6.0 เผยแพร่วันที่ 18 สิงหาคม 2026
-- Release Note ทางการมีรายการ v0.6.0 Build 190–195
+- App Store และ Google Play แสดง Dungeon Within เวอร์ชัน 0.6.2
+- Release Note ทางการล่าสุดคือ v0.6.2 Build 199
+- Release Note ฉบับเต็มระบุว่า Trial of Assault แทน Trial of Invincibility แต่ข้อความสรุปบน Store ระบุ Forgotten Trial จึงติด `needs_review` ไว้จนกว่าจะตรวจในเกม
 - หน้าแรกของ Wiki อังกฤษแก้ไขล่าสุดวันที่ 24 กรกฎาคม 2026
 - Wiki อังกฤษระบุชัดเจนว่าเป็น Community Wiki และไม่เกี่ยวข้องกับ GameCoaster
 - ข้อความบน Wiki อังกฤษใช้ CC BY-SA 4.0 เว้นแต่ระบุเป็นอย่างอื่น
 - ยังไม่ได้ตรวจสิทธิ์ของภาพแต่ละไฟล์ จึงยังไม่นำภาพเหล่านั้นมาใช้ในเว็บไทย
-

@@ -35,7 +35,7 @@ export default function MonsterSkillsPage() {
         <footer>{monster.sourceAvailable ? 'Wiki ต้นทางแก้ไขล่าสุด' : 'สถานะต้นทาง'} {monster.sourceUpdated}</footer>
       </article>)}</div>
       {results.length === 0 && <div className="monster-empty"><b>ไม่พบชื่อสกิล</b><p>ลองเปลี่ยนคำค้นหา ช่องสกิล หรือ Tier</p></div>}
-      <div className="source-note"><span>ตรวจต้นทางล่าสุด 31 ส.ค. 2026</span><span>Dungeon Within v0.6.0 · needs_review</span></div>
+      <div className="source-note"><span>ทบทวนกับ Release Note ล่าสุด 9 ก.ย. 2026</span><span>Dungeon Within v0.6.2 · needs_review</span></div>
     </section><SiteFooter />
   </main>;
 }
