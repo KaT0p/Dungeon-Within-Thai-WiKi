@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
+import { updates } from './updates-data';
 import SiteHeader, { SiteFooter } from './components/site-header';
 import { darkLords, glossaryTerms, integrationStatus, monsters, prototypeMonsters, statusEffects } from './content-data';
 import { facilities } from './facilities-data';
@@ -9,6 +10,7 @@ import { relics } from './items-data';
 import { monsterSkillTranslations } from './monster-skills-data';
 
 const searchIndex = [
+  { title: 'อัปเดตทั้งหมด', description: 'แพตช์เกม ข่าวล่วงหน้า และเนื้อหาใหม่บนเว็บ', category: 'อัปเดต', href: '/updates', keywords: 'อัปเดต ใหม่ ข่าว patch changelog update' },
   { title: 'เตรียมอัปเดต v0.7.0', description: 'ข่าวล่วงหน้า ยังไม่ใช่ระบบปัจจุบัน', category: 'ข่าว', href: '/wiki/systems#preview-070', keywords: '0.7.0 authority transcendence endless จอมมารใหม่ เตรียมอัปเดต' },
   { title: 'อัปเดต v0.6.3', description: 'คลังชิ้นส่วนและการปรับ Variant Research, Fusion, Sacrifice', category: 'แพตช์', href: '/wiki/systems#version-063', keywords: '0.6.3 parts storage คลังชิ้นส่วน variant research fusion sacrifice' },
   { title: 'ระบบเกม', description: 'Run, Node, Combat และความก้าวหน้าข้าม Run', category: 'ระบบ', href: '/wiki/systems', keywords: 'system ark combat node run variant research tactical map trial assault ระบบ เกม วิจัยมอนสเตอร์ แผนที่ยุทธวิธี' },
@@ -38,13 +40,7 @@ const categories = [
   { icon: '◎', title: 'แหล่งข้อมูล', description: 'ที่มา สิทธิ์ และการตรวจสอบ', tone: 'teal', href: '/wiki/sources' },
 ];
 
-const updates = [
-  { category: 'เตรียมอัปเดต v0.7.0', title: 'จอมมารใหม่และแคมเปญด่านไม่สิ้นสุด', description: 'ข่าวล่วงหน้า: ปรับ Authority และเตรียมระบบ Transcendence ยังไม่ใช่ระบบปัจจุบัน', href: '/wiki/systems#preview-070' },
-  { category: 'Patch v0.6.3', title: 'คลังชิ้นส่วนและตัวเลือกป้องกันการเลือก Variant', description: 'สรุปภาษาไทยจาก App Store Build 204 พร้อมจุดที่ยังต้องตรวจในเกม', href: '/wiki/systems#version-063' },
-  { category: 'Patch v0.6.2', title: 'Variant Research และการปรับ Monster Promotion', description: 'สรุประบบใหม่ การเปลี่ยน Ability Score และรายการที่ต้องตรวจต่อใน Build 199', href: '/wiki/systems#version-062' },
-  { category: 'Phase 2.5b', title: 'Demon Lord Relics', description: 'เพิ่ม War of the Gods 28 ชิ้น แยกชุด Tania, Lilith และ Meryelle พร้อมตัวกรอง', href: '/wiki/items#relic-catalog' },
-  { category: 'Phase 2.4b', title: 'แนวทางจัดผังและชุดกับดัก', description: 'ผัง 3×3 สามแบบ ชุดแนะนำตามจอมมาร และคู่ห้องที่นำไปทดลองใน Run ได้', href: '/wiki/facilities#layout-guide' },
-];
+
 
 export default function Home() {
   const [query, setQuery] = useState('');
@@ -61,7 +57,7 @@ export default function Home() {
       <dl className="quick-stats"><div><dt>{monsters.length}</dt><dd>มอนสเตอร์ในบัญชี</dd></div><div><dt>{glossaryTerms.length}</dt><dd>คำศัพท์บนเว็บ</dd></div><div><dt>{integrationStatus.gameVersion}</dt><dd>เวอร์ชันเป้าหมาย</dd></div></dl>
     </div><aside className="featured-card" aria-label="Dungeon Within Thailand Wiki"><div className="hero-og-image"><img src="/og.png" alt="Dungeon Within Thailand Wiki คู่มือสำหรับผู้เล่นชาวไทย" /></div><div className="featured-content"><span className="tag">คลังข้อมูลภาษาไทย</span><h2>รู้จักจอมมารทั้ง 3 ตัว</h2><p>เปรียบเทียบแกนกลไก ค่าสถานะ สกิล ชิ้นส่วน และแนวทางจัดทีม</p><a href="/wiki/dark-lords">เปิดบัญชีจอมมาร <span>↗</span></a></div></aside></section>
     <section className="category-section" id="categories"><div className="section-heading"><div><p className="eyebrow"><span /> คลังข้อมูล</p><h2>เนื้อหาที่พร้อมอ่าน</h2></div><p>ไม่มีบทความทั่วไปที่ไม่มีที่มา<br />ข้อมูลไม่แน่ใจจะมีป้ายเตือนชัดเจน</p></div><div className="category-grid">{categories.map((category)=><a className={`category-card ${category.tone}`} href={category.href} key={category.title}><span className="category-icon">{category.icon}</span><span><strong>{category.title}</strong><small>{category.description}</small></span><b>→</b></a>)}</div></section>
-    <section className="latest-section" id="updates"><div className="section-heading dark-heading"><div><p className="eyebrow"><span /> Content Integration</p><h2>ข่าวและอัปเดตล่าสุด</h2></div><span className="version-chip">อัปเดต {integrationStatus.updatedAt}</span></div><div className="article-list">{updates.map((item,index)=><a href={item.href} key={item.title}><span className="article-number">0{index+1}</span><span><b>{item.category}</b><strong>{item.title}</strong><small>{item.description}</small></span><i>↗</i></a>)}</div></section>
+    <section className="latest-section" id="updates"><div className="section-heading dark-heading"><div><p className="eyebrow"><span /> Content Integration</p><h2>ข่าวและอัปเดตล่าสุด</h2></div><span className="version-chip">อัปเดต {integrationStatus.updatedAt}</span><a className="text-button" href="/updates">อ่านอัปเดตทั้งหมด →</a></div><div className="article-list">{updates.slice(0,5).map((item,index)=><a href={item.href} key={item.title}><span className="article-number">0{index+1}</span><span><b>{item.category}</b><strong>{item.title}</strong><small>{item.description}</small></span><i>↗</i></a>)}</div></section>
     <section className="guide-strip" id="guides"><div><p className="eyebrow"><span /> เพิ่มล่าสุด</p><h2>สกิลมอนสเตอร์ Tier 8–9</h2></div><p>เพิ่มคำแปล 60 ชื่อจากมอนสเตอร์ระดับสูงสุดครบ 12 ตัว<br />ปิดชุดคำแปลชื่อสกิล Tier 1–9 รวม 290 ชื่อ</p><Link className="primary-button" href="/wiki/monster-skills">เปิดคลังสกิล <span>→</span></Link></section><SiteFooter />
   </main>;
 }

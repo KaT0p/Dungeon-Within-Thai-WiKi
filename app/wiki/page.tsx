@@ -1,6 +1,7 @@
 import SiteHeader, { SiteFooter } from '../components/site-header';
 
 const sections = [
+  ['↗', 'อัปเดต', 'อ่านแพตช์เกม ข่าวล่วงหน้า และเนื้อหาใหม่ที่เพิ่มบนเว็บ เรียงจากล่าสุด', '/updates', 'ข่าวและประวัติอัปเดต'],
   ['✦', 'ค่าสถานะ', 'อธิบาย STR, DEX, CON, INT, WIS, CHA, Key Stat และวิธีอ่านการโจมตี', '/wiki/stats', '6 Core Stats'],
   ['◈', 'เอฟเฟกต์สถานะ', 'ชื่อไทย ผล ระยะเวลา และจำนวนสแต็กของสถานะที่เชื่อมกับจอมมารและมอนสเตอร์ต้นแบบ', '/wiki/status-effects', '33 สถานะ'],
   ['♜', 'จอมมาร', 'ข้อมูล Desponia, Aura และ Rhea พร้อม Skill, Authority และแนวทางจัดทีม', '/wiki/dark-lords', '3 ตัว · มี Guide'],

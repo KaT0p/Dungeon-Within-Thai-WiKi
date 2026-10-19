@@ -1292,3 +1292,33 @@ footer,
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+
+/* Update history */
+.mobile-updates { display: none; color: #765329; font-size: 14px; padding: 10px 8px; }
+.updates-jumps { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.updates-jumps a { display: inline-flex; align-items: center; gap: 12px; padding: 12px 18px; border: 1px solid #d8cdbf; background: #faf7f2; color: #65466f; font-size: 15px; }
+.updates-jumps span { color: #796d7b; }
+.updates-date-note { color: #756b75; font-size: 14px; line-height: 1.8; }
+.updates-group { margin-top: 40px; scroll-margin-top: 100px; }
+.updates-group h2 { font-size: 26px; color: #342b39; margin: 0 0 20px; }
+.updates-list { border-top: 1px solid #d8cdbf; }
+.update-entry { display: grid; grid-template-columns: 190px 1fr; gap: 28px; padding: 28px 0; border-bottom: 1px solid #d8cdbf; }
+.update-meta { display: flex; align-items: flex-start; flex-direction: column; gap: 12px; font-size: 14px; color: #756b75; }
+.update-meta span { padding: 5px 10px; background: #eae1ed; color: #65466f; font-size: 13px; }
+.update-entry h3 { margin: 0 0 10px; color: #342b39; font-size: 21px; }
+.update-entry p { margin: 0 0 16px; color: #756b75; line-height: 1.8; font-size: 16px; }
+.update-read { color: #765329; font-size: 15px; }
+.update-entry a:hover, .mobile-updates:hover { text-decoration: underline; }
+.updates-jumps a:focus-visible, .update-entry a:focus-visible, .mobile-updates:focus-visible { outline: 2px solid #65466f; outline-offset: 4px; }
+.latest-section .section-heading { flex-wrap: wrap; gap: 20px; }
+@media (max-width: 1200px) {
+  .site-header nav, .header-search { display: none; }
+  .mobile-updates, .menu-button { display: flex; }
+}
+@media (max-width: 600px) {
+  .update-entry { grid-template-columns: 1fr; gap: 14px; }
+  .update-meta { flex-direction: row; flex-wrap: wrap; align-items: center; }
+  .site-header { gap: 8px; padding-inline: 16px; }
+  .menu-button span { display: none; }
+  .brand { gap: 8px; }
+}
