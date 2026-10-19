@@ -1,9 +1,9 @@
 # Dungeon Within Thailand Wiki — แหล่งข้อมูลและนโยบายอ้างอิง
 
-> สถานะเอกสาร: ตรวจสอบรอบแรกแล้ว  
-> วันที่ตรวจสอบ: 2026-09-09
-> เวอร์ชันเกมหลักที่ติดตาม: **v0.6.2**
-> Build ล่าสุดที่พบใน Release Note ทางการ: **Build 199**
+> สถานะเอกสาร: เพิ่มการตรวจข่าวและแพตช์ v0.6.3
+> วันที่ตรวจสอบ: 2026-10-19
+> เวอร์ชันเกมหลักที่ติดตาม: **v0.6.3**
+> Build ล่าสุดในดัชนีทางการ: **Build 205**; รายละเอียดที่ตรวจได้: **Build 204 จาก App Store**
 
 เอกสารนี้กำหนดว่าแหล่งใดใช้ยืนยันข้อมูลประเภทใด และต้องบันทึกเครดิตอย่างไร ข้อมูลในเว็บไซต์ห้ามถูกยกระดับเป็น `ตรวจสอบแล้ว` หากไม่มีแหล่งที่เหมาะสมรองรับ
 
@@ -13,8 +13,8 @@
 
 | แหล่งข้อมูล | ลิงก์ | ใช้สำหรับ | หมายเหตุ |
 |---|---|---|---|
-| GameCoaster Release Notes (EN) | [Dungeon Within Release Note](https://gamecoaster.notion.site/Dungeon-Within-Release-Note-EN-32e4966ac9c3808bba34f56a92457d39) | Patch Notes, Build, ระบบใหม่, การแก้สมดุล | แหล่งหลักสำหรับติดตามการเปลี่ยนแปลง ปัจจุบันพบ v0.6.2 Build 199 |
-| Apple App Store | [Dungeon Within](https://apps.apple.com/us/app/dungeon-within/id6761328517) | เวอร์ชันที่เผยแพร่, ประวัติเวอร์ชัน, ข้อมูลแอป | App Store แสดง v0.6.2 และสรุปการเปลี่ยนแปลงหลัก |
+| GameCoaster Release Notes (EN) | [Dungeon Within Release Note](https://gamecoaster.notion.site/Dungeon-Within-Release-Note-EN-32e4966ac9c3808bba34f56a92457d39) | Patch Notes, Build, ระบบใหม่, การแก้สมดุล | แหล่งหลักสำหรับติดตามการเปลี่ยนแปลง พบรายการ v0.6.3 Build 205; ยังอ่านรายละเอียดฉบับเต็มไม่ได้ |
+| Apple App Store | [Dungeon Within](https://apps.apple.com/us/app/dungeon-within/id6761328517) | เวอร์ชันที่เผยแพร่, ประวัติเวอร์ชัน, ข้อมูลแอป | ตรวจ v0.6.3 Build 204 จาก Store สิงคโปร์ (ลิงก์ด้านล่าง) |
 | Google Play | [Dungeon Within](https://play.google.com/store/apps/details?id=com.GameCoaster.DungeonWithin) | เวอร์ชัน Android, รายละเอียดเกม, ช่องทางสนับสนุน | บางประเทศหรือแคชการค้นหาอาจแสดง Patch ช้ากว่า App Store |
 | GameCoaster | [เว็บไซต์ผู้พัฒนา](https://www.gamecoaster.com/) | ยืนยันผู้พัฒนาและลิงก์ทางการ | ไม่ใช่แหล่งรายละเอียดค่าสถานะรายตัว |
 | GameCoaster Official Discord | [Discord Server](https://discord.com/servers/gamecoaster-official-496757856662585385) | ประกาศ ข่าว และตรวจสอบคำถามกับชุมชน | ต้องเก็บลิงก์หรือภาพหลักฐานของประกาศที่นำมาอ้างอิง |
@@ -168,7 +168,7 @@ notes: บริบทหรือข้อขัดแย้งที่พบ
 - [x] มีรายการข้อมูลที่เสี่ยงล้าสมัยถึง v0.6.2
 - [x] มี Template สำหรับบันทึกแหล่งอ้างอิง
 
-## หมายเหตุการตรวจสอบรอบนี้
+## หมายเหตุการตรวจสอบเดิม — 2026-09-09
 
 - App Store และ Google Play แสดง Dungeon Within เวอร์ชัน 0.6.2
 - Release Note ทางการล่าสุดคือ v0.6.2 Build 199
@@ -177,3 +177,12 @@ notes: บริบทหรือข้อขัดแย้งที่พบ
 - Wiki อังกฤษระบุชัดเจนว่าเป็น Community Wiki และไม่เกี่ยวข้องกับ GameCoaster
 - ข้อความบน Wiki อังกฤษใช้ CC BY-SA 4.0 เว้นแต่ระบุเป็นอย่างอื่น
 - ยังไม่ได้ตรวจสิทธิ์ของภาพแต่ละไฟล์ จึงยังไม่นำภาพเหล่านั้นมาใช้ในเว็บไทย
+
+## ผลตรวจ 2026-10-19
+
+App Store ระบุ v0.6.3 Build 204 วันที่ 15 กันยายน 2026 ส่วนดัชนี Release Note มี Build 205 แต่ยังตรวจรายละเอียดฉบับเต็มไม่ได้ เนื้อหานี้จึงสรุปเฉพาะ Build 204 และยังไม่ได้ตรวจซ้ำในเกม
+
+- [App Store สิงคโปร์](https://apps.apple.com/sg/app/dungeon-within/id6761328517?platform=watch)
+- [ดัชนีประกาศทางการ](https://gamecoaster.notion.site/Dungeon-Within-Release-Note-EN-32e4966ac9c3808bba34f56a92457d39)
+- [ข่าวเตรียมอัปเดต v0.7.0](https://gamecoaster.notion.site/Dev-Note-0-7-0-Update-Preview-3fb4966ac9c380109466e7cc2ebcd2b5) เป็นข้อมูลระหว่างพัฒนา ไม่ใช้แทนข้อมูลปัจจุบัน
+- ข้อมูลรายตัวและตัวเลขเดิมยังคงวันที่ เวอร์ชัน และสถานะตรวจสอบเดิม จนกว่าจะมีหลักฐานใหม่

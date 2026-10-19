@@ -9,7 +9,7 @@
 [![Next.js](https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-149ECA?logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Game version](https://img.shields.io/badge/Game-v0.6.2-8B5CF6)](./docs/SOURCES.md)
+[![Game version](https://img.shields.io/badge/Game-v0.6.3-8B5CF6)](./docs/SOURCES.md)
 
 </div>
 
@@ -98,7 +98,7 @@ npm run dev
 - `community_claim` — มาจากการทดสอบหรือความเห็นของชุมชน
 - `obsolete` — ข้อมูลจากเวอร์ชันเก่าที่ไม่ควรใช้กับเวอร์ชันปัจจุบัน
 
-อ่านรายละเอียดได้จาก [โครงสร้างข้อมูล](./docs/DATA_SCHEMA.md), [แหล่งข้อมูลและนโยบายอ้างอิง](./docs/SOURCES.md), [สรุปแพตช์ v0.6.1–v0.6.2](./docs/PATCH_NOTES.md) และ [มาตรฐานคำศัพท์](./docs/GLOSSARY.md)
+อ่านรายละเอียดได้จาก [โครงสร้างข้อมูล](./docs/DATA_SCHEMA.md), [แหล่งข้อมูลและนโยบายอ้างอิง](./docs/SOURCES.md), [สรุปแพตช์ v0.6.1–v0.6.3 และข่าวเตรียมอัปเดต v0.7.0](./docs/PATCH_NOTES.md) และ [มาตรฐานคำศัพท์](./docs/GLOSSARY.md)
 
 ## การมีส่วนร่วม
 

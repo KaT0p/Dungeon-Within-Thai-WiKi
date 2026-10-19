@@ -1,7 +1,7 @@
 export const integrationStatus = {
-  gameVersion: '0.6.2',
-  gameBuild: 199,
-  updatedAt: '9 ก.ย. 2026',
+  gameVersion: '0.6.3',
+  gameBuild: 204, // Build ที่ตรวจรายละเอียดได้จาก App Store; ดัชนีทางการมี 205 แต่ยังตรวจฉบับเต็มไม่ได้
+  updatedAt: '19 ต.ค. 2026',
   completedTopics: 19,
   nextTopic: 'ทำบัญชีศัตรูและผู้บุกรุก',
 };
@@ -284,7 +284,7 @@ export const glossaryTerms = [
   ['Promotion', 'เลื่อนขั้น', 'ใช้ใน Wiki'], ['Ascension', 'จุติ', 'ใช้ใน Wiki'], ['Aspect', 'Aspect (แอสเปกต์)', 'คงอังกฤษ'],
   ['Variant Research', 'วิจัยมอนสเตอร์ร่างพิเศษ', 'คำแปลแฟนเมด'], ['Tactical Map', 'แผนที่ยุทธวิธี', 'คำแปลแฟนเมด'],
   ['Trial of Assault', 'บททดสอบแห่งการจู่โจม', 'คำแปลแฟนเมด'], ['Repeat Modification', 'ปรับแต่งซ้ำ', 'คำแปลแฟนเมด'],
-  ['Part', 'ชิ้นส่วน', 'ใช้ใน Wiki'], ['Main Part', 'ชิ้นส่วนหลัก', 'ใช้ใน Wiki'], ['Sub Part', 'ชิ้นส่วนเสริม', 'ใช้ใน Wiki'],
+  ['Parts Storage', 'คลังชิ้นส่วน', 'คำแปลแฟนเมด · v0.6.3'], ['Part', 'ชิ้นส่วน', 'ใช้ใน Wiki'], ['Main Part', 'ชิ้นส่วนหลัก', 'ใช้ใน Wiki'], ['Sub Part', 'ชิ้นส่วนเสริม', 'ใช้ใน Wiki'],
   ['Relic', 'วัตถุโบราณ / ไอเทมเสริม', 'คงอังกฤษในชื่อหมวด'], ['Dream Dust', 'ผงความฝัน', 'คงอังกฤษในหน้าระบบ'], ['Chest', 'หีบรางวัล', 'ใช้ใน Wiki'],
   ['Ethereal Part', 'Ethereal Part (ชิ้นส่วนชั่วคราว)', 'ต้องตรวจในเกม'], ['Skill', 'สกิล', 'ใช้ใน Wiki'],
   ['Ability', 'ความสามารถ', 'ใช้ใน Wiki'], ['Authority', 'อำนาจจอมมาร', 'ใช้ใน Wiki'], ['Trait', 'คุณลักษณะ', 'ใช้ใน Wiki'],
