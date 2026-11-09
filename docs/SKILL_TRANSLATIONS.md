@@ -101,3 +101,12 @@
 ## หัวข้อถัดไปที่เสนอ
 
 ทำ **พจนานุกรม Status Effect** ที่ปรากฏในสกิลชุดนี้ เช่น Erosion, Bloom, Full Bloom, Valor, Heal Block, Silenced, Concealment, Fear, Rooted, Blinded, Regeneration, Prone, Stun และ Overload ก่อนเริ่มแปลสกิลมอนสเตอร์
+
+
+## เพิ่ม Ostea, Quintessa และ Zaria — 9 พฤศจิกายน 2026
+
+เพิ่มคำแปลสกิล/Part 15 รายการ และ Authority 21 รายการพร้อมคำอธิบายและคูลดาวน์ใน `app/new-dark-lords-data.ts` ใช้ชื่ออังกฤษเดิมควบคู่ชื่อไทย แสดงบนหน้าจอมมารรายตัว ข้อมูลแปลจากผู้ร่วมเขียน Dungeon Within Wiki ภายใต้ CC BY-SA 4.0 และเผยแพร่ส่วนดัดแปลงด้วยสัญญาอนุญาตเดียวกัน
+
+แหล่งต้นทาง (แก้ไข 6 พ.ย. 2026): [Ostea](https://dungeonwithin.miraheze.org/wiki/Ostea?oldid=2779), [Quintessa](https://dungeonwithin.miraheze.org/wiki/Quintessa), [Zaria](https://dungeonwithin.miraheze.org/wiki/Zaria)
+
+ช่องที่ต้นทางไม่ระบุสูตรยังเว้นไว้ พร้อมเก็บข้อขัดแย้งรายตัวในหัวข้อ “จุดที่ยังต้องตรวจ” ชื่อไทยเป็นคำแปลแฟนเมด ไม่ใช่คำแปลทางการ

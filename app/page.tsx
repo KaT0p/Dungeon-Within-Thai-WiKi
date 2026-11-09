@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
+import { newDarkLordDetails } from './new-dark-lords-data';
 import { newDarkLords } from './patch-data';
 import { updates } from './updates-data';
 import SiteHeader, { SiteFooter } from './components/site-header';
@@ -24,7 +25,7 @@ const searchIndex = [
   { title: 'ห้องและกับดัก', description: '41 รายการ พร้อมผัง 3×3 และชุดแนะนำตามจอมมาร', category: 'สิ่งปลูกสร้าง', href: '/wiki/facilities', keywords: `จัดผัง layout ชุดกับดัก Desponia Aura Rhea ${facilities.map((entry)=>`${entry.name} ${entry.nameTh} ${entry.kind} ${entry.tags.join(' ')}`).join(' ')}` },
   { title: 'ไอเทมและอุปกรณ์', description: 'Relic 87 ชิ้นและคู่มือช่อง Part', category: 'ไอเทม', href: '/wiki/items', keywords: `relic part equipment dream dust item อุปกรณ์ ${relics.map((entry)=>`${entry.name} ${entry.nameTh} ${entry.group} ${entry.tags.join(' ')}`).join(' ')}` },
   ...prototypeMonsters.map((monster)=>({ title: monster.name, description: monster.summaryTh, category: 'มอนสเตอร์', href: `/wiki/monsters/${monster.slug}`, keywords: `${monster.name} ${monster.keyStat} ${monster.attackTypes.join(' ')} ${monster.skills.map((skill)=>`${skill.en} ${skill.th}`).join(' ')}` })),
-  ...newDarkLords.map((lord)=>({ title: lord.name, description: lord.theme, category: 'จอมมาร', href: `/wiki/dark-lords/${lord.slug}`, keywords: `${lord.name} ${lord.mechanic}` })),
+  ...newDarkLords.map((lord)=>({ title: lord.name, description: newDarkLordDetails[lord.slug].summary, category: 'จอมมาร', href: `/wiki/dark-lords/${lord.slug}`, keywords: `${lord.name} ${lord.mechanic} ${newDarkLordDetails[lord.slug].keyStat} ${newDarkLordDetails[lord.slug].skills.flat().join(' ')} ${newDarkLordDetails[lord.slug].authorities.flat().join(' ')}` })),
   ...darkLords.map((lord)=>({ title: lord.name, description: lord.theme, category: 'จอมมาร', href: `/wiki/dark-lords/${lord.slug}`, keywords: `${lord.name} ${lord.core} ${lord.keyStat}` })),
   { title: 'พจนานุกรมศัพท์', description: 'มาตรฐานคำแปลไทย–อังกฤษ', category: 'ศัพท์', href: '/wiki/glossary', keywords: glossaryTerms.map((term)=>`${term[0]} ${term[1]}`).join(' ') },
   { title: 'แหล่งข้อมูลและการตรวจสอบ', description: 'ที่มาของข้อมูลและระดับความน่าเชื่อถือ', category: 'โครงการ', href: '/wiki/sources', keywords: 'source license cc by sa แหล่งข้อมูล' },
