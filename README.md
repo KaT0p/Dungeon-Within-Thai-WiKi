@@ -9,7 +9,7 @@
 [![Next.js](https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-149ECA?logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Game version](https://img.shields.io/badge/Game-v0.6.3-8B5CF6)](./docs/SOURCES.md)
+[![Game version](https://img.shields.io/badge/Game-v0.7.2-8B5CF6)](./docs/SOURCES.md)
 
 </div>
 
@@ -19,7 +19,7 @@
 ## จุดเด่นของโปรเจกต์
 
 - ค้นหาข้อมูลจากหน้าแรกด้วยชื่อไทย ชื่ออังกฤษ และคำศัพท์ที่เกี่ยวข้อง
-- รวมข้อมูลจอมมาร 3 ตัว พร้อม Skill, Part, Authority และแนวทางจัดทีม
+- รวมจอมมาร 6 ตัว พร้อมรูป Ostea, Quintessa และ Zaria; สกิลตัวใหม่และคู่มือก่อน v0.7 ยังรอทบทวน
 - ทำบัญชีมอนสเตอร์ 76 ตัว แบ่ง Tier 1–9 พร้อมคำแปลชื่อสกิล 290 ชื่อ
 - รวมเอฟเฟกต์สถานะ ค่าสถานะหลัก และคำอธิบายกลไกการต่อสู้
 - รวม Facility 41 รายการ และ Relic 87 ชิ้น พร้อมตัวกรองและคู่มือใช้งาน
@@ -33,7 +33,7 @@
 |---|---|
 | ระบบเกม | วงจรการเล่น, Node, Combat, Ark of Memory และความก้าวหน้าข้าม Run |
 | ค่าสถานะ | STR, DEX, CON, INT, WIS, CHA, Key Stat และสูตร Modifier |
-| จอมมาร | Desponia, Aura และ Rhea พร้อมแนวทางเล่น |
+| จอมมาร | 6 ตัว รวม Ostea, Quintessa และ Zaria พร้อมข้อมูลที่ยืนยันได้และป้ายรอทบทวน |
 | มอนสเตอร์ | รายชื่อ Tier 1–9, ประเภท, Key Stat และหน้ารายละเอียด |
 | สกิลมอนสเตอร์ | ชื่ออังกฤษ–ไทย แยกตาม Tier และช่องสกิล |
 | ห้องและกับดัก | Facility, ผัง 3×3 และชุดแนะนำตามจอมมาร |
@@ -98,7 +98,7 @@ npm run dev
 - `community_claim` — มาจากการทดสอบหรือความเห็นของชุมชน
 - `obsolete` — ข้อมูลจากเวอร์ชันเก่าที่ไม่ควรใช้กับเวอร์ชันปัจจุบัน
 
-อ่านรายละเอียดได้จาก [โครงสร้างข้อมูล](./docs/DATA_SCHEMA.md), [แหล่งข้อมูลและนโยบายอ้างอิง](./docs/SOURCES.md), [สรุปแพตช์ v0.6.1–v0.6.3 และข่าวเตรียมอัปเดต v0.7.0](./docs/PATCH_NOTES.md) และ [มาตรฐานคำศัพท์](./docs/GLOSSARY.md)
+อ่านรายละเอียดได้จาก [โครงสร้างข้อมูล](./docs/DATA_SCHEMA.md), [แหล่งข้อมูลและนโยบายอ้างอิง](./docs/SOURCES.md), [สรุปแพตช์ถึง v0.7.2 Build 217](./docs/PATCH_NOTES.md) และ [มาตรฐานคำศัพท์](./docs/GLOSSARY.md)
 
 ## การมีส่วนร่วม
 

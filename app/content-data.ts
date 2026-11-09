@@ -1,7 +1,7 @@
 export const integrationStatus = {
-  gameVersion: '0.6.3',
-  gameBuild: 204, // Build ที่ตรวจรายละเอียดได้จาก App Store; ดัชนีทางการมี 205 แต่ยังตรวจฉบับเต็มไม่ได้
-  updatedAt: '19 ต.ค. 2026',
+  gameVersion: '0.7.2',
+  gameBuild: 217, // ตรวจจากประกาศทางการและ App Store; ค่ารายตัวยังต้องตรวจในเกม
+  updatedAt: '9 พ.ย. 2026',
   completedTopics: 19,
   nextTopic: 'ทำบัญชีศัตรูและผู้บุกรุก',
 };

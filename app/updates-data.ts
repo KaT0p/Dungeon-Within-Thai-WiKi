@@ -1,5 +1,8 @@
 export const updates = [
-  { date: '2026-10-19', kind: 'ข่าวล่วงหน้า', category: 'เตรียมอัปเดต v0.7.0', title: 'จอมมารใหม่และแคมเปญด่านไม่สิ้นสุด', description: 'ข่าวล่วงหน้า: ปรับ Authority และเตรียมระบบ Transcendence ยังไม่ใช่ระบบปัจจุบัน', href: '/wiki/systems#preview-070' },
+  { date: '2026-11-09', kind: 'แพตช์เกม', category: 'Patch v0.7.2 · Build 217', title: 'ปรับระบบต่อสู้แบบเรียลไทม์และแก้เอฟเฟกต์อมตะ', description: 'สรุป Build 216–217 พร้อมจุดที่กระทบสถานะและคู่มือเดิม', href: '/wiki/systems#version-072' },
+  { date: '2026-11-09', kind: 'เนื้อหาบนเว็บ', category: 'จอมมารใหม่', title: 'Ostea, Quintessa และ Zaria', description: 'เพิ่มรูปและหน้าข้อมูลทั้งสาม พร้อมข้อมูลที่ยืนยันได้จากแพตช์ทางการ', href: '/wiki/dark-lords' },
+  { date: '2026-11-09', kind: 'แพตช์เกม', category: 'Patch v0.7.1 · Build 212', title: 'ปรับ Zaria, Quintessa และ Eternal War', description: 'ปรับ Aspect, รางวัลด่านไม่สิ้นสุด และหน้ารายละเอียด Authority', href: '/wiki/systems#version-071' },
+  { date: '2026-11-09', kind: 'แพตช์เกม', category: 'Patch v0.7.0 · Build 208–209', title: 'จอมมารใหม่และระบบ Authority ใหม่', description: 'เพิ่ม Transcendence, Eternal War และระบบเสริมพลังจอมมารใน Memento Mori', href: '/wiki/systems#version-070' },
   { date: '2026-10-19', kind: 'แพตช์เกม', category: 'Patch v0.6.3', title: 'คลังชิ้นส่วนและตัวเลือกป้องกันการเลือก Variant', description: 'สรุปภาษาไทยจาก App Store Build 204 พร้อมจุดที่ยังต้องตรวจในเกม', href: '/wiki/systems#version-063' },
   { date: '2026-09-09', kind: 'แพตช์เกม', category: 'Patch v0.6.2', title: 'Variant Research และการปรับ Monster Promotion', description: 'สรุประบบใหม่ การเปลี่ยน Ability Score และรายการที่ต้องตรวจต่อใน Build 199', href: '/wiki/systems#version-062' },
   { date: '2026-08-31', kind: 'เนื้อหาบนเว็บ', category: 'คู่มือใหม่', title: "Architect's Workshop และ Parts", description: 'รวมลำดับปลดล็อก เครื่องมือถาวร ค่าใช้จ่าย และสายพึ่งพา พร้อมคู่มือชิ้นส่วน', href: '/wiki/architects-workshop' },
